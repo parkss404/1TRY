@@ -25,3 +25,10 @@ search_selector = '#search > div > form > ul > li:nth-child(3) > a'
 search = driver.find_element(By.CSS_SELECTOR, search_selector)
 search.click()
 time.sleep(1)
+
+input_box_xpath='''//*[@id="category"]/ul/li[1]/a'''
+input_box=driver.find_element(By.XPATH, input_box_xpath)
+time.sleep(1)
+input_box.click()
+
+
