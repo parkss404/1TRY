@@ -16,3 +16,8 @@ time.sleep(1)
 
 element.send_keys(my_place)
 time.sleep(1)
+
+search_button = '''//*[@id="button_search_address"]/button[2]'''
+driver.find_element(By.XPATH, search_button).click()
+time.sleep(1)
+
