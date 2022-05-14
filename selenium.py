@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 my_place = input("지역을 입력하세요 : ")
+food_name= input("음식을 입력하세요 : ")
 
 driver = webdriver.Chrome()
 driver.get("https://www.yogiyo.co.kr/")
@@ -34,5 +35,6 @@ input_box.click()
 search_xpath_c='''//*[@id="category"]/ul/li[15]/form/div/input'''
 find_food=driver.find_element(By.XPATH, search_xpath_c)
 time.sleep(1)
+find_food.send_keys(food_name)
 
 
