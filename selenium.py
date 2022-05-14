@@ -32,9 +32,14 @@ input_box=driver.find_element(By.XPATH, input_box_xpath)
 time.sleep(1)
 input_box.click()
 
-search_xpath_c='''//*[@id="category"]/ul/li[15]/form/div/input'''
-find_food=driver.find_element(By.XPATH, search_xpath_c)
+send_food_xpath='''//*[@id="category"]/ul/li[15]/form/div/input'''
+send_food=driver.find_element(By.XPATH, send_food_xpath)
 time.sleep(1)
-find_food.send_keys(food_name)
+send_food.send_keys(food_name)
+
+food_button_xpath='''//*[@id="category_search_button"]'''
+food_button=driver.find_element(By.XPATH,food_button_xpath)
+food_button.click()
+time.sleep(1)
 
 
