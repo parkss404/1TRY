@@ -31,4 +31,8 @@ input_box=driver.find_element(By.XPATH, input_box_xpath)
 time.sleep(1)
 input_box.click()
 
+search_xpath_c='''//*[@id="category"]/ul/li[15]/form/div/input'''
+find_food=driver.find_element(By.XPATH, search_xpath_c)
+time.sleep(1)
+
 
