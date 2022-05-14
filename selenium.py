@@ -6,3 +6,7 @@ driver.get("https://www.yogiyo.co.kr/")
 driver.maximize_window()
 time.sleep(1)
 
+xpath = '''//*[@id="search"]/div/form/input'''
+element = driver.find_element(By.XPATH, xpath)
+element.clear()
+time.sleep(1)
