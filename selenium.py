@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from bs4 import BeautifulSoup
 
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
@@ -42,4 +44,6 @@ food_button=driver.find_element(By.XPATH,food_button_xpath)
 food_button.click()
 time.sleep(1)
 
+html = driver.page_source
+html_source = BeautifulSoup(html, 'html.parser')
 
