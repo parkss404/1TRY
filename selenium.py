@@ -52,3 +52,17 @@ restaurantName = html_source.find_all("div", class_ = "restaurant-name ng-bindin
 restaurantScore = html_source.find_all("span", class_ = "ico-star1 ng-binding") 
 restaurantReview = html_source.find_all("span", attrs = {"class":"review_num ng-binding", "ng-show":"restaurant.review_count > 0"})
 deliveryTime = html_source.find_all("li", class_ = "delivery-time ng-binding") 
+
+data_list = []
+profile_list = []
+
+for i, j, k, m in zip(restaurantName, restaurantScore, restaurantReview, deliveryTime):
+    data_list.append(i.string) 
+    data_list.append(j.string.replace("★ ","")) 
+    data_list.append(re.sub(" |\n|리뷰","",k.string)) 
+    data_list.append(m.string.replace("\n","").replace(" ","")) 
+    profile_list.append(data_list) 
+    data_list = [] 
+ 
+time.sleep(30)
+driver.close() 
