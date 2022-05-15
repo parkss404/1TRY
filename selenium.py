@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
+import re
 
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
@@ -47,3 +48,7 @@ time.sleep(1)
 html = driver.page_source
 html_source = BeautifulSoup(html, 'html.parser')
 
+restaurantName = html_source.find_all("div", class_ = "restaurant-name ng-binding")
+restaurantScore = html_source.find_all("span", class_ = "ico-star1 ng-binding") 
+restaurantReview = html_source.find_all("span", attrs = {"class":"review_num ng-binding", "ng-show":"restaurant.review_count > 0"})
+deliveryTime = html_source.find_all("li", class_ = "delivery-time ng-binding") 
