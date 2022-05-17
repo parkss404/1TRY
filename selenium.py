@@ -8,7 +8,14 @@ import openpyxl
 
 def write_excel_template():
     excel_file=openpyxl.Workbook()
+    excel_sheet=excel_file.active
+    excel_sheet.cell(1,1,'가게이름')
+    excel_sheet.cell(1,2,'별점')
+    excel_sheet.cell(1,3,'리뷰수')
+    excel_sheet.cell(1,4,'배달시간')
 
+    excel_file.save(filename)
+    excel_file.close()
 
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
