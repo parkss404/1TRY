@@ -6,13 +6,19 @@ import re
 from openpyxl import Workbook
 import openpyxl
 
-def write_excel_template():
+def write_excel_template(filename,sheetname,listdata):
     excel_file=openpyxl.Workbook()
     excel_sheet=excel_file.active
     excel_sheet.cell(1,1,'가게이름')
     excel_sheet.cell(1,2,'별점')
     excel_sheet.cell(1,3,'리뷰수')
     excel_sheet.cell(1,4,'배달시간')
+
+    if sheetname != '':
+        excel_sheet.title=sheetname
+
+    for item in listdata:
+        excel_sheet.append(item)
 
     excel_file.save(filename)
     excel_file.close()
@@ -78,4 +84,7 @@ for i, j, k, m in zip(restaurantName, restaurantScore, restaurantReview, deliver
     data_list = [] 
  
 time.sleep(30)
+
+write_excel_template('data.xlsx', 'stores profile', profile_list)
+
 driver.close() 
