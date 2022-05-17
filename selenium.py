@@ -3,6 +3,12 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import re
+from openpyxl import Workbook
+import openpyxl
+
+def write_excel_template():
+    excel_file=openpyxl.Workbook()
+
 
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
