@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import re
 from openpyxl import Workbook
 import openpyxl
+from openpyxl.utils import get_column_letter
 
 def write_excel_template(filename,sheetname,listdata):
     excel_file=openpyxl.Workbook()
@@ -19,6 +20,8 @@ def write_excel_template(filename,sheetname,listdata):
 
     for item in listdata:
         excel_sheet.append(item)
+
+     excel_sheet.column_dimensions[get_column_letter(1)].width=40
 
     excel_file.save(filename)
     excel_file.close()
