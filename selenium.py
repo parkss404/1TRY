@@ -32,6 +32,15 @@ my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
 file_name=input("저장할 파일 이름을 입력하세요 : ")
 
+if placeNumber=='1':
+    my_place="충북 청주시 흥덕구 복대동 680"
+elif placeNumber=='2':
+    my_place="충북 청주시 서원구 사창동 539"
+elif placeNumber=='3':
+    my_place="충북 청주시 서원구 성봉로242번길 31-25"
+else:
+    my_place="충북 청주시 서원구 1순환로 776"
+
 driver = webdriver.Chrome()
 driver.get("https://www.yogiyo.co.kr/")
 
