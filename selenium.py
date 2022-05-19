@@ -26,8 +26,11 @@ def write_excel_template(filename,sheetname,listdata):
     excel_file.save(filename)
     excel_file.close()
 
+
+placeNumber=input("정문=1, 중문=2, 서문=3, 후문=4")
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
+file_name=input("저장할 파일 이름을 입력하세요 : ")
 
 driver = webdriver.Chrome()
 driver.get("https://www.yogiyo.co.kr/")
@@ -88,6 +91,6 @@ for i, j, k, m in zip(restaurantName, restaurantScore, restaurantReview, deliver
  
 time.sleep(30)
 
-write_excel_template('data.xlsx', 'stores profile', profile_list)
+write_excel_template(file_name, 'stores profile', profile_list)
 
 driver.close() 
