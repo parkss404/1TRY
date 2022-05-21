@@ -59,7 +59,7 @@ search_button = '''//*[@id="button_search_address"]/button[2]'''
 driver.find_element(By.XPATH, search_button).click()
 time.sleep(1)
 
-search_selector = '#search > div > form > ul > li:nth-child(3) > a'
+search_selector = '.btn.btn-default.ico-search1'
 search = driver.find_element(By.CSS_SELECTOR, search_selector)
 search.click()
 time.sleep(1)
