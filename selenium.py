@@ -64,8 +64,8 @@ search = driver.find_element(By.CSS_SELECTOR, search_selector)
 search.click()
 time.sleep(1)
 
-input_box_xpath='''//*[@id="category"]/ul/li[1]/a'''
-input_box=driver.find_element(By.XPATH, input_box_xpath)
+input_box_name='category_keyword'
+input_box=driver.find_element(By.XPATH, input_box_name)
 time.sleep(1)
 input_box.click()
 
