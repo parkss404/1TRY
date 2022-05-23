@@ -20,25 +20,34 @@ int main() {
 	int st = 0;
 	int nd = 0;
 	int rd = 0;
+	que1:												
 	cout << "혼밥 메뉴를 찾으시나요?(O,X)" << endl;
 	cin >> a;
 	if (a == 'O') {
 		st + 1;
+		que2:
 		cout << "매운 음식을 잘 드시나요?(O,X)" << endl;
 	}
 	else if (a == 'X') {
 		cout << "모두 매운 음식을 잘 드시나요?(O,X)" << endl;
 	}
+	else { goto que1; };
 	cin >> b;
 	if (b == 'O') {
 		nd + 1;
+		que3:
 		cout << "매운 고기메뉴가 먹고싶나요?(O,X)" << endl;
 	}
 	else if (b == 'X') {
 		cout << "안매운 고기메뉴가 먹고싶나요?(O,X)" << endl;
 	}
+	else { goto que2; };
 	cin >> c;
 	if (c == 'O') {
 		rd + 1;
 	}
+	else if (c == 'X') {
+		goto next;
+	}
+	else { goto que3; };
 }
