@@ -1,4 +1,6 @@
 #include <iostream>
+using std::cout; using std::cin;
+using std::string;
 using namespace std;
 
 string Food000[] = { "짜장면","피자" };
@@ -22,13 +24,19 @@ int main() {
 	cin >> a;
 	if (a == 'O') {
 		st + 1;
+		cout << "매운 음식을 잘 드시나요?(O,X)" << endl;
 	}
-	cout << "매운 음식을 잘 드시나요?(O,X)" << endl;
+	else if (a == 'X') {
+		cout << "모두 매운 음식을 잘 드시나요?(O,X)" << endl;
+	}
 	cin >> b;
 	if (b == 'O') {
 		nd + 1;
+		cout << "매운 고기메뉴가 먹고싶나요?(O,X)" << endl;
 	}
-	cout << "고기메뉴가 먹고싶나요?(O,X)" << endl;
+	else if (b == 'X') {
+		cout << "안매운 고기메뉴가 먹고싶나요?(O,X)" << endl;
+	}
 	cin >> c;
 	if (c == 'O') {
 		rd + 1;
