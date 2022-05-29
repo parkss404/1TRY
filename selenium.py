@@ -59,6 +59,12 @@ search_button = '''//*[@id="button_search_address"]/button[2]'''
 driver.find_element(By.XPATH, search_button).click()
 time.sleep(1)
 
+if select_mode=='1':
+    click_star_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(2)'
+    click_star=driver.find_element(By.CSS_SELECTOR,click_star_selector)
+    click_star.click()
+    time.sleep(1)
+
 search_selector = '.btn.btn-default.ico-search1'
 search = driver.find_element(By.CSS_SELECTOR, search_selector)
 search.click()
