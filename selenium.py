@@ -14,6 +14,8 @@ def write_excel_template(filename,sheetname,listdata):
     excel_sheet.cell(1,2,'별점')
     excel_sheet.cell(1,3,'리뷰수')
     excel_sheet.cell(1,4,'배달시간')
+    
+     excel_sheet.column_dimensions[get_column_letter(1)].width=40
 
     if sheetname != '':
         excel_sheet.title=sheetname
@@ -21,11 +23,8 @@ def write_excel_template(filename,sheetname,listdata):
     for item in listdata:
         excel_sheet.append(item)
 
-     excel_sheet.column_dimensions[get_column_letter(1)].width=40
-
     excel_file.save(filename)
     excel_file.close()
-
 
 placeNumber=input("정문=1, 중문=2, 서문=3, 후문=4")
 my_place = input("지역을 입력하세요 : ")
