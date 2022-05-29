@@ -31,6 +31,7 @@ placeNumber=input("정문=1, 중문=2, 서문=3, 후문=4")
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
 file_name=input("저장할 파일 이름을 입력하세요 : ")
+select_mode=input("1-별점 순 2-리뷰 많은 순 3-최소 주문 금액 순 4-거리 순 5-배달 시간순 6-기본 정렬순>")
 
 if placeNumber=='1':
     my_place="충북 청주시 흥덕구 복대동 680"
@@ -65,7 +66,7 @@ search.click()
 time.sleep(1)
 
 input_box_name='category_keyword'
-input_box=driver.find_element(By.XPATH, input_box_name)
+input_box=driver.find_element(By.XPATH, input_box_name#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(6))
 time.sleep(1)
 input_box.click()
 
