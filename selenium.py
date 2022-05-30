@@ -69,6 +69,11 @@ elif select_mode=='2':
     click_review=driver.find_element(By.CSS_SELECTOR,click_review_selector)
     click_review.click()
     time.sleep(1)
+elif select_mode=='3':
+    click_min_price_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(4)'
+    click_min_price=driver.find_element(By.CSS_SELECTOR, click_min_price_selector)
+    click_min_price.click()
+    time.sleep(1)
 
 search_selector = '.btn.btn-default.ico-search1'
 search = driver.find_element(By.CSS_SELECTOR, search_selector)
