@@ -84,6 +84,11 @@ elif select_mode=='5':
     click_deliveryTime=driver.find_element(By.CSS_SELECTOR,click_deliveryTime_selector)
     click_deliveryTime.click()
     time.sleep(1)
+else:
+    click_basicSort_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(1)'
+    click_basicSort=driver.find_element(By.CSS_SELECTOR,click_basicSort_selector)
+    click_basicSort.click()
+    time.sleep(1)
 
 search_selector = '.btn.btn-default.ico-search1'
 search = driver.find_element(By.CSS_SELECTOR, search_selector)
