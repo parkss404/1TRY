@@ -3,10 +3,18 @@ import sys
 
 app = Flask(__name__)
 
+Restaurant = [
+                ["1","2","3","4"],
+                ["5","6","7","8"],
+                ["9","10","11","12"],
+                ["13","14","15","16"]
+]
+
+
 location = {
             "version" : "2.0",
             "template" : {
-                "outputs" : [{"simpleText": {"text": "날짜를 선택해 주세요"}}], 
+                "outputs" : [{"simpleText": {"text": "날짜를 선택해 주세요" }}], 
                  "quickReplies": [{"label": "오늘", "action": "message", "messageText": "오늘"},
                                   {"label": "월", "action": "message", "messageText": "월"},
                                   {"label": "화", "action": "message", "messageText": "화"},
@@ -35,7 +43,6 @@ day = {
             }
         }
 
-Restaurant = ["안녕","반가워","ㅎㅇ","ㄷㄸ"] 
 
 @app.route('/message', methods=['POST'])
 def Message():
@@ -45,9 +52,10 @@ def Message():
     print(content)
 
     global location
-    global day
+    global food
     global locationkey
-    global daykey
+    global foodkey
+    global Restaurant
   
     if content == u"중문":
         dataSend = location
@@ -65,21 +73,66 @@ def Message():
         dataSend = location
         locationkey = 3
 
-    elif content == u"일":
-        daykey = 3
+    elif content == u"치킨":
+        foodkey = 0
         dataSend = {
             "version" : "2.0",
             "template" : {
                 "outputs" : [
                     {
                         "simpleText" : {
-                            "text" : "error입니다." + Restaurant[locationkey] + Restaurant[daykey]
+                            "text" : Restaurant[locationkey][foodkey]
                         }
                     }
                 ]
             }
         }
-    
+
+    elif content == u"피자":
+        foodkey = 1
+        dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : Restaurant[locationkey][foodkey]
+                        }
+                    }
+                ]
+            }
+        }
+
+    elif content == u"햄버거":
+        foodkey = 2
+        dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : Restaurant[locationkey][foodkey]
+                        }
+                    }
+                ]
+            }
+        }
+
+    elif content == u"삼겹살":
+        foodkey = 3
+        dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : Restaurant[locationkey][foodkey]
+                        }
+                    }
+                ]
+            }
+        }
+      
     else:
         dataSend = {
             "version" : "2.0",
