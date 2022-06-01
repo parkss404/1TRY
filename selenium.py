@@ -29,7 +29,8 @@ def write_excel_template(filename,sheetname,listdata):
 placeNumber=input("정문=1, 중문=2, 서문=3, 후문=4")
 my_place = input("지역을 입력하세요 : ")
 food_name= input("음식을 입력하세요 : ")
-file_name=input("저장할 파일 이름을 입력하세요 : ")
+file_name=input("저장할 파일 이름을 입력하세요( 확장자를 .xlsx로 붙여줘야 합니다. ex) chicken.xlsx ) : ")
+select_mode=input("1-별점 순 2-리뷰 많은 순 3-최소 주문 금액 순 4-거리 순 5-배달 시간순 6-기본 정렬순>")
 
 if placeNumber=='1':
     my_place="충북 청주시 흥덕구 복대동 680"
@@ -58,13 +59,44 @@ search_button = '''//*[@id="button_search_address"]/button[2]'''
 driver.find_element(By.XPATH, search_button).click()
 time.sleep(1)
 
+if select_mode=='1':
+    click_star_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(2)'
+    click_star=driver.find_element(By.CSS_SELECTOR,click_star_selector)
+    click_star.click()
+    time.sleep(1)
+elif select_mode=='2':
+    click_review_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(3)'
+    click_review=driver.find_element(By.CSS_SELECTOR,click_review_selector)
+    click_review.click()
+    time.sleep(1)
+elif select_mode=='3':
+    click_min_price_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(4)'
+    click_min_price=driver.find_element(By.CSS_SELECTOR, click_min_price_selector)
+    click_min_price.click()
+    time.sleep(1)
+elif select_mode=='4':
+    click_distance_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(5)'
+    click_distance=driver.find_element(By.CSS_SELECTOR,click_distance_selector)
+    click_distance.click()
+    time.sleep(1)
+elif select_mode=='5':
+    click_deliveryTime_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(6)'
+    click_deliveryTime=driver.find_element(By.CSS_SELECTOR,click_deliveryTime_selector)
+    click_deliveryTime.click()
+    time.sleep(1)
+else:
+    click_basicSort_selector='#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(1)'
+    click_basicSort=driver.find_element(By.CSS_SELECTOR,click_basicSort_selector)
+    click_basicSort.click()
+    time.sleep(1)
+
 search_selector = '.btn.btn-default.ico-search1'
 search = driver.find_element(By.CSS_SELECTOR, search_selector)
 search.click()
 time.sleep(1)
 
 input_box_name='category_keyword'
-input_box=driver.find_element(By.XPATH, input_box_name)
+input_box=driver.find_element(By.XPATH, input_box_name#content > div > div.row.restaurant-list-info > div.list-option > div > select > option:nth-child(6))
 time.sleep(1)
 input_box.click()
 
