@@ -15,4 +15,4 @@ placeLeft=["False","False","False","False","False","False","False","False","Fals
 placeFront=["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","파파돈","대구전봇대막창","짚신스시","탕화쿵푸"]
 placeBack=["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","면세상","가마꿉"]
 
-listRestaurantPlace=[placeFront,placeMid,placeLeft,placeBac]
+listRestaurantPlace=[placeFront,placeMid,placeLeft,placeBack]
