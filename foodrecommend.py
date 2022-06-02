@@ -3,7 +3,18 @@ import sys
 
 app = Flask(__name__)
 
-  
+
+foodlist =[
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+] 
+
 @app.route('/food', methods=['POST'])
 def index():
 
