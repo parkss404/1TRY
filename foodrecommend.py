@@ -15,9 +15,22 @@ foodlist =[
   ["내장볶음","닭강정","쭈꾸미"],#111
 ] 
 
+Q2 = {
+  "version" : "2.0",
+            "template" : {
+                "outputs" : [{"simpleText": {"text": "Q2. 고기가 땡기나요? " }}], 
+                 "quickReplies": [{"label": "고기 괜찮아요", "action": "message", "messageText": "고기 괜찮아요"},
+                                  {"label": "고기 별로에요", "action": "message", "messageText": "고기 별로에요"},
+                                  ]
+            }
+}
+
 @app.route('/food', methods=['POST'])
 def index():
 
+    global Q1
+    global Q2
+    global Q3
     global Q1number
     global Q2number
     global Q3number
@@ -30,6 +43,7 @@ def index():
     print(content)
 
     if content == u"같이먹어요":
+      datasend = Q2
       Q1number = 1
     elif content == u"혼밥입니다":
       Q1number = 0
