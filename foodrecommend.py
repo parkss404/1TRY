@@ -25,6 +25,16 @@ Q2 = {
             }
 }
 
+Q3 = {
+  "version" : "2.0",
+            "template" : {
+                "outputs" : [{"simpleText": {"text": "Q3. 매운건 어떠세요? " }}], 
+                 "quickReplies": [{"label": "매운거 괜찮아요", "action": "message", "messageText": "매운거 괜찮아요"},
+                                  {"label": "매운거 별로에요", "action": "message", "messageText": "매운거 별로에요"},
+                                  ]
+            }
+}
+
 @app.route('/food', methods=['POST'])
 def index():
 
