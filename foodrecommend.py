@@ -20,8 +20,13 @@ def index():
     elif content == u"혼밥입니다":
       Q1number = 0
     elif content == u"고기 괜찮아요": 
+      Q2number = 1
+    elif content == u"고기 별로에요": 
       Q2number = 0
-    
+    elif content == u"매운거 괜찮아요":
+      Q3number = 1
+    elif content == u"매운거 별로에요":
+      Q3number = 0
     
     return jsonify(dataSend)
 
