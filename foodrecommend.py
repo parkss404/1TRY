@@ -46,6 +46,7 @@ def index():
     global Q3number
     global keynumber
     global foodlist
+    global dataSend
   
     content = request.get_json()
     content = content['userRequest']['utterance']
@@ -53,28 +54,21 @@ def index():
     print(content)
 
     if content == u"같이먹어요":
-      datasend = Q2
+      dataSend = Q2
       Q1number = 1
+    
     elif content == u"혼밥입니다":
+      dataSend = Q2
       Q1number = 0
     elif content == u"고기 괜찮아요": 
+      dataSend = Q3
       Q2number = 1
     elif content == u"고기 별로에요": 
+      dataSend = Q3
       Q2number = 0
-      dataSend = {
-            "version" : "2.0",
-            "template" : {
-                "outputs" : [
-                    {
-                        "simpleText" : {
-                            "text" : foodlist[keynumber] 
-                        }
-                    }
-                ]
-            }
-        }
     elif content == u"매운거 괜찮아요":
       Q3number = 1
+      keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
       dataSend = {
             "version" : "2.0",
             "template" : {
@@ -89,6 +83,7 @@ def index():
         }
     elif content == u"매운거 별로에요":
       Q3number = 0
+      keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
       dataSend = {
             "version" : "2.0",
             "template" : {
@@ -101,9 +96,20 @@ def index():
                 ]
             }
         }
-
-    keynumber = Q1number * 4 + Q2number * 2 + Q3number #이진수 -> 10진수 변환
-
+      
+    else:
+        dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : "error입니다." 
+                        }
+                    }
+                ]
+            }
+        }
     return jsonify(dataSend)
 
 app.run(host='0.0.0.0', port=81)
