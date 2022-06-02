@@ -77,7 +77,18 @@ def index():
       Q2number = 0
     elif content == u"매운거 괜찮아요":
       Q3number = 1
-      dataSend = A
+      dataSend = dataSend = {
+            "version" : "2.0",
+              "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : foodlist[keynumber][0] + foodlist[keynumber][1] +foodlist[keynumber][2]
+                        }
+                    }
+                ]
+            }
+        }
       
     elif content == u"매운거 별로에요":
       Q3number = 0
@@ -90,7 +101,7 @@ def index():
                 "outputs" : [
                     {
                         "simpleText" : {
-                            "text" : foodlist[keynumber][0]
+                            "text" : foodlist[keynumber][0] + foodlist[keynumber][1] +foodlist[keynumber][2]
                         }
                     }
                 ]
