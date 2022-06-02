@@ -37,14 +37,49 @@ def index():
       Q2number = 1
     elif content == u"고기 별로에요": 
       Q2number = 0
+      dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : foodlist[keynumber] 
+                        }
+                    }
+                ]
+            }
+        }
     elif content == u"매운거 괜찮아요":
       Q3number = 1
+      dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                           "text" : foodlist[keynumber]  
+                        }
+                    }
+                ]
+            }
+        }
     elif content == u"매운거 별로에요":
       Q3number = 0
+      dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : foodlist[keynumber] 
+                        }
+                    }
+                ]
+            }
+        }
 
     keynumber = Q1number * 4 + Q2number * 2 + Q3number #이진수 -> 10진수 변환
-    
-    
+
     return jsonify(dataSend)
 
 app.run(host='0.0.0.0', port=81)
