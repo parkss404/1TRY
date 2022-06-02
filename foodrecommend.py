@@ -3,12 +3,15 @@ import sys
 
 app = Flask(__name__)
 
+  
 @app.route('/food', methods=['POST'])
 def index():
 
     global Q1number
     global Q2number
     global Q3number
+    global keynumber
+    global foodlist
   
     content = request.get_json()
     content = content['userRequest']['utterance']
@@ -27,6 +30,9 @@ def index():
       Q3number = 1
     elif content == u"매운거 별로에요":
       Q3number = 0
+
+    keynumber = Q1number * 4 + Q2number * 2 + Q3number #이진수 -> 10진수 변환
+    
     
     return jsonify(dataSend)
 
