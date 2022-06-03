@@ -30,5 +30,12 @@ public class Question1 extends AppCompatActivity {
                 Intent intent =new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
+        btn_2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Question1.this, Question2.class);
+                startActivity(intent);
+            }
+        });
     }
 }
