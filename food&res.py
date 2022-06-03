@@ -3,6 +3,12 @@ import sys
 
 app = Flask(__name__)
 
+foodimg = [
+  ["장터순대국밥","육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다","https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220315_185%2F1647313153278poCw7_JPEG%2Fupload_d3039ad0f8de6590e63f9d0793e15cb3.jpg","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","피자웨이브","족발","부대찌개","쭈꾸미","은화수식당","막창","짚신스시&롤","이런이궈","한가네짬뽕","매운치킨","등촌칼국수"],
+["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","쩔어떡볶이포차","청년피자","큰손족발","땅스부대찌개","초사골불타는쭈꾸미낙지""False","False","False","False","False"],
+["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","파파돈","대구전봇대막창","짚신스시","탕화쿵푸"],
+["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","면세상","가마꿉"]
+]
 
 foodlist =[
   ["짜장면","피자"],#000
@@ -15,12 +21,16 @@ foodlist =[
   ["내장볶음","닭강정","쭈꾸미"],#111
 ] 
 
+list = []
+
+
 Restaurant = [
-              ["장터순대국밥","육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다","소주신랑 보쌈부인","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","False","False","False","False","False","False","False","False","False","False"],
+              ["장터순대국밥","육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다","소주신랑 보쌈부인","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","피자웨이브","족발","부대찌개","쭈꾸미","은화수식당","막창","짚신스시&롤","이런이궈","한가네짬뽕","매운치킨","등촌칼국수"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","쩔어떡볶이포차","청년피자","큰손족발","땅스부대찌개","초사골불타는쭈꾸미낙지""False","False","False","False","False"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","파파돈","대구전봇대막창","짚신스시","탕화쿵푸"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","면세상","가마꿉"]
 ]
+
 
 location = {
             "version" : "2.0",
@@ -33,8 +43,6 @@ location = {
                                   ]
             }
         }
-
-list = []
 
 Q2 = {
   "version" : "2.0",
@@ -56,6 +64,12 @@ Q3 = {
             }
 }
 
+A = {
+      "version" : "2.0",
+                 "template" : {
+                   "outputs" : [{"simpleText": {"text": "안녕하세요 "}}]
+                              }
+    }
     
 
 @app.route('/food', methods=['POST'])
@@ -71,18 +85,13 @@ def index():
     global foodlist
     global dataSend
     global list
-    global location
-    global food
-    global locationkey
-    global foodkey
-    global Restaurant
   
     content = request.get_json()
     content = content['userRequest']['utterance']
     content=content.replace("\n","")
     print(content)
 
-    if content == u"같이먹어요":
+    if content == u"같이 먹어요":
       dataSend = Q2
       Q1number = 1
     
@@ -131,6 +140,36 @@ def index():
                     
             }
         }
+      
+    else:
+        dataSend = {
+            "version" : "2.0",
+            "template" : {
+                "outputs" : [
+                    {
+                        "simpleText" : {
+                            "text" : "error입니다." 
+                        }
+                    }
+                ]
+            }
+        }
+    return jsonify(dataSend)
+
+  
+@app.route('/message', methods=['POST'])
+def Message():
+    content = request.get_json()
+    content = content['userRequest']['utterance']
+    content=content.replace("\n","")
+    print(content)
+
+    global location
+    global food
+    global locationkey
+    global foodkey
+    global Restaurant
+  
     if content == u"국밥":
         dataSend = location
         foodkey = 0
@@ -234,18 +273,29 @@ def index():
     elif content == u"중문":
         locationkey = 0
         dataSend = {
-            "version" : "2.0",
-            "template" : {
-                "outputs" : 
-                    [
-                      {
-                        "simpleText" : {
-                            "text" : Restaurant[locationkey][foodkey]
-                        }
-                    }
-                ]
-            }
-        }
+          "version": "2.0",
+                            "template": {"outputs": [{'basicCard': {"title": Restaurant[locationkey][foodkey],
+                                                                    "description": "가성비 맛집 소.신.보.부",
+                                                                    "thumbnail": {"imageUrl": foodimg[locationkey][foodkey],
+                                                                                  "link": {"web": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
+                                                                                           }},
+                                                                    "buttons": [
+                                                
+                                                                        {
+                                                                            "action": "webLink",
+                                                                            "label": "가게정보보기",
+                                                                            "webLinkUrl": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
+                                                                        },
+                                                                        {
+                                                                            "action": "share",
+                                                                            "label": "공유하기",
+                                                                        }
+                                                                    ]
+                                                                    }
+                                                      }
+                                                     ]
+                                         }
+                            }
 
     elif content == u"서문":
         locationkey = 1
@@ -305,7 +355,6 @@ def index():
                 ]
             }
         }
-
     return jsonify(dataSend)
 
 app.run(host='0.0.0.0', port=81)
