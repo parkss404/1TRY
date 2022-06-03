@@ -20,7 +20,7 @@ list = []
 Q2 = {
   "version" : "2.0",
             "template" : {
-                "outputs" : [{"simpleText": {"text": "Q2. 고기가 땡기나요? " }}], 
+                "outputs" : [{"simpleText": {"text": "Q2. 고기가 땡기나요? 2/3" }}], 
                  "quickReplies": [{"label": "고기 괜찮아요", "action": "message", "messageText": "고기 괜찮아요"},
                                   {"label": "고기 별로에요", "action": "message", "messageText": "고기 별로에요"},
                                   ]
@@ -30,7 +30,7 @@ Q2 = {
 Q3 = {
   "version" : "2.0",
             "template" : {
-                "outputs" : [{"simpleText": {"text": "Q3. 매운건 어떠세요? " }}], 
+                "outputs" : [{"simpleText": {"text": "Q3. 매운건 어떠세요? 3/3" }}], 
                  "quickReplies": [{"label": "매운거 괜찮아요", "action": "message", "messageText": "매운거 괜찮아요"},
                                   {"label": "매운거 별로에요", "action": "message", "messageText": "매운거 별로에요"},
                                   ]
@@ -87,7 +87,7 @@ def index():
       dataSend = {
             "version" : "2.0",
               "template" : {
-                "outputs" : [{"simpleText": {"text": "당신의 이번 끼니는..?! " }}], 
+                "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n해당 음식을 누르시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
                  "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
                                   {"label": list[1], "action": "message", "messageText": list[1]},
                                   {"label": list[2], "action": "message", "messageText": list[2]}
