@@ -15,16 +15,12 @@ foodlist =[
   ["내장볶음","닭강정","쭈꾸미"],#111
 ] 
 
-list = []
-
-
 Restaurant = [
-              ["장터순대국밥","육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다","소주신랑 보쌈부인","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","피자웨이브","족발","부대찌개","쭈꾸미","은화수식당","막창","짚신스시&롤","이런이궈","한가네짬뽕","매운치킨","등촌칼국수"],
+              ["장터순대국밥","육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다","소주신랑 보쌈부인","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","False","False","False","False","False","False","False","False","False","False"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","쩔어떡볶이포차","청년피자","큰손족발","땅스부대찌개","초사골불타는쭈꾸미낙지""False","False","False","False","False"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","파파돈","대구전봇대막창","짚신스시","탕화쿵푸"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","면세상","가마꿉"]
 ]
-
 
 location = {
             "version" : "2.0",
@@ -37,6 +33,8 @@ location = {
                                   ]
             }
         }
+
+list = []
 
 Q2 = {
   "version" : "2.0",
@@ -58,12 +56,6 @@ Q3 = {
             }
 }
 
-A = {
-      "version" : "2.0",
-                 "template" : {
-                   "outputs" : [{"simpleText": {"text": "안녕하세요 "}}]
-                              }
-    }
     
 
 @app.route('/food', methods=['POST'])
@@ -79,6 +71,11 @@ def index():
     global foodlist
     global dataSend
     global list
+    global location
+    global food
+    global locationkey
+    global foodkey
+    global Restaurant
   
     content = request.get_json()
     content = content['userRequest']['utterance']
@@ -134,36 +131,6 @@ def index():
                     
             }
         }
-      
-    else:
-        dataSend = {
-            "version" : "2.0",
-            "template" : {
-                "outputs" : [
-                    {
-                        "simpleText" : {
-                            "text" : "error입니다." 
-                        }
-                    }
-                ]
-            }
-        }
-    return jsonify(dataSend)
-
-  
-@app.route('/message', methods=['POST'])
-def Message():
-    content = request.get_json()
-    content = content['userRequest']['utterance']
-    content=content.replace("\n","")
-    print(content)
-
-    global location
-    global food
-    global locationkey
-    global foodkey
-    global Restaurant
-  
     if content == u"국밥":
         dataSend = location
         foodkey = 0
@@ -338,6 +305,7 @@ def Message():
                 ]
             }
         }
+
     return jsonify(dataSend)
 
 app.run(host='0.0.0.0', port=81)
