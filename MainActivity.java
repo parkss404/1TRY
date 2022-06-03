@@ -3,7 +3,11 @@ package com.example.a1try;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.content.Intent;
+import android.widget.Button;
 import android.view.View;
+
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
