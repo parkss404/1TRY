@@ -31,5 +31,12 @@ public class Question2O extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btn_4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Question2.this, Question3.class);
+                startActivity(intent);
+            }
+        });
     }
 }
