@@ -109,14 +109,13 @@ def index():
       keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
       int(keynumber)
       for i in foodlist[keynumber]:
-        list.append(i)
+        list[0] = list[0] + i
       dataSend = {
             "version" : "2.0",
               "template" : {
                 "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n해당 음식을 누르시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
                  "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
-                                  {"label": list[1], "action": "message", "messageText": list[1]},
-                                  {"label": list[2], "action": "message", "messageText": list[2]}
+                      
                                   ]
             }
         }
@@ -127,15 +126,14 @@ def index():
       int(keynumber)
       print(keynumber)
       for i in foodlist[keynumber]:
-        list.append(i)
+        list[0] = list[0] + i
   
       dataSend = {
             "version" : "2.0",
               "template" : {
                "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n해당 음식을 누르시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
                  "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
-                                  {"label": list[1], "action": "message", "messageText": list[1]},
-                                  {"label": list[2], "action": "message", "messageText": list[2]}
+                                  
                                   ]
                     
             }
