@@ -8,8 +8,7 @@ import android.content.Intent;
 import android.widget.Button;
 import android.view.View;
 
-import com.example.a1try.question2.Question2O;
-import com.example.a1try.question2.Question2X;
+import com.example.a1try.question2.Question2;
 import com.example.a1try.R;
 
 public class Question1 extends AppCompatActivity {
@@ -28,17 +27,8 @@ public class Question1 extends AppCompatActivity {
         btn_1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Question1.this, Question2O.class);
+                Intent intent =new Intent(Question1.this, Question2.class);
                 startActivity(intent);
             }
-        });
-
-        btn_2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent =new Intent(Question1.this, Question2X.class);
-                startActivity(intent);
-            }
-        });
     }
 }
