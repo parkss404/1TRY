@@ -6,37 +6,47 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="먹는 인원이 2명 이상인가요?"
-        android:textColor="#000000"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="200dp" />
-  
     <Button
-        android:id="@+id/button1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/btn_1"
+        android:layout_width="97dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="189dp"
         android:text="O"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="442dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/btn_2"
+        android:layout_width="97dp"
+        android:layout_height="102dp"
+        android:layout_marginEnd="69dp"
         android:text="X"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="442dp" />
-  
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="208dp"
+        android:text="혼자 먹나요?"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
