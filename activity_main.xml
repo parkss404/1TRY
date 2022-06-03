@@ -28,5 +28,15 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="351dp" />
-        
+
+    <Button
+        android:id="@+id/btn_1link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1트 챗봇링크 "
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="454dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
