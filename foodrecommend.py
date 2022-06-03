@@ -87,13 +87,11 @@ def index():
       dataSend = {
             "version" : "2.0",
               "template" : {
-                "outputs" : [
-                    {
-                        "simpleText" : {
-                            "text" :  list[0] + "," +list[1] + "," + list[2]
-                        }
-                    }
-                ]
+                "outputs" : [{"simpleText": {"text": "당신의 이번 끼니는..?! " }}], 
+                 "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
+                                  {"label": list[1], "action": "message", "messageText": list[1]},
+                                  {"label": list[2], "action": "message", "messageText": list[2]}
+                                  ]
             }
         }
       
