@@ -8,10 +8,11 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.a1try.result.Result;
+import com.example.a1try.result.OOOResult;
 import com.example.a1try.R;
+import com.example.a1try.result.OOXResult;
 
-public class Question3 extends AppCompatActivity {
+public class Question3OO extends AppCompatActivity {
 
     private Button btn_5;
     private Button btn_6;
@@ -27,14 +28,15 @@ public class Question3 extends AppCompatActivity {
         btn_5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Question3.this, Result.class);
+                Intent intent =new Intent(Question3OO.this, OOOResult.class);
                 startActivity(intent);
             }
         });
+
         btn_6.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Question3.this, Result.class);
+                Intent intent =new Intent(Question3OO.this, OOXResult.class);
                 startActivity(intent);
             }
         });
