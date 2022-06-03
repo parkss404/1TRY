@@ -8,11 +8,11 @@ foodlist =[
   ["짜장면","피자"],#000
   ["부대찌개","짬뽕"],#001
   ["내장류","보쌈","족발","치킨","회"],#010
-  ["닭발","닭볶음탕","등갈비","매운치킨","찜닭"],#011
-  ["국밥","김밥","냉면","덮밥","만두","쌀국수","파스타","햄버거"],#100
+  ["닭발","닭볶음탕","등갈비","매운치킨","불족발","아구찜","찜닭"],#011
+  ["국밥","김밥","냉면","덮밥","만두","샌드위치","쌀국수","파스타","햄버거"],#100
   ["마라탕","맵떡"],#101
   ["돈가스","삼겹살","스시"],#110
-  ["막창","닭강정","쭈꾸미"],#111
+  ["내장볶음","닭강정","쭈꾸미"],#111
 ] 
 
 list = []
@@ -20,7 +20,7 @@ list = []
 Q2 = {
   "version" : "2.0",
             "template" : {
-                "outputs" : [{"simpleText": {"text": "Q2. 고기가 땡기나요? 2/3" }}], 
+                "outputs" : [{"simpleText": {"text": "Q2. 고기가 땡기나요? \n2/3" }}], 
                  "quickReplies": [{"label": "고기 괜찮아요", "action": "message", "messageText": "고기 괜찮아요"},
                                   {"label": "고기 별로에요", "action": "message", "messageText": "고기 별로에요"},
                                   ]
@@ -30,7 +30,7 @@ Q2 = {
 Q3 = {
   "version" : "2.0",
             "template" : {
-                "outputs" : [{"simpleText": {"text": "Q3. 매운건 어떠세요? 3/3" }}], 
+                "outputs" : [{"simpleText": {"text": "Q3. 매운건 어떠세요? \n3/3" }}], 
                  "quickReplies": [{"label": "매운거 괜찮아요", "action": "message", "messageText": "매운거 괜찮아요"},
                                   {"label": "매운거 별로에요", "action": "message", "messageText": "매운거 별로에요"},
                                   ]
@@ -106,13 +106,12 @@ def index():
       dataSend = {
             "version" : "2.0",
               "template" : {
-                "outputs" : [
-                    {
-                        "simpleText" : {
-                            "text" : list[0]+ "," +list[1] + "," + list[2]
-                        }
-                    }
-                ]
+               "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n해당 음식을 누르시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
+                 "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
+                                  {"label": list[1], "action": "message", "messageText": list[1]},
+                                  {"label": list[2], "action": "message", "messageText": list[2]}
+                                  ]
+                    
             }
         }
       
