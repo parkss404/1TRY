@@ -15,6 +15,8 @@ foodlist =[
   ["내장볶음","닭강정","쭈꾸미"],#111
 ] 
 
+list = []
+
 Q2 = {
   "version" : "2.0",
             "template" : {
@@ -56,6 +58,7 @@ def index():
     global foodlist
     global dataSend
     global A
+    global list
   
     content = request.get_json()
     content = content['userRequest']['utterance']
@@ -77,13 +80,17 @@ def index():
       Q2number = 0
     elif content == u"매운거 괜찮아요":
       Q3number = 1
-      dataSend = dataSend = {
+      keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
+      int(keynumber)
+      for i in foodlist[keynumber]:
+        list.append(i)
+      dataSend = {
             "version" : "2.0",
               "template" : {
                 "outputs" : [
                     {
                         "simpleText" : {
-                            "text" : foodlist[keynumber][0] + foodlist[keynumber][1] +foodlist[keynumber][2]
+                            "text" :  list[0] + "," +list[1] + "," + list[2]
                         }
                     }
                 ]
@@ -95,13 +102,16 @@ def index():
       keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
       int(keynumber)
       print(keynumber)
+      for i in foodlist[keynumber]:
+        list.append(i)
+  
       dataSend = {
             "version" : "2.0",
               "template" : {
                 "outputs" : [
                     {
                         "simpleText" : {
-                            "text" : foodlist[keynumber][0] + foodlist[keynumber][1] +foodlist[keynumber][2]
+                            "text" : list[0]+ "," +list[1] + "," + list[2]
                         }
                     }
                 ]
