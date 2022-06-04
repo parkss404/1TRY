@@ -13,5 +13,13 @@ public class XOOResult extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_result211);
+        
+        TextView XOO=findViewById(R.id.XOO);
+        
+        String[] XOOtxt=getResources().getStringArray(R.array.XOOtxt);
+        Random random=new Random();
+        int n= random.nextInt(XOOtxt.length-1);
+
+        XOO.setText(XOOtxt[n]);
     }
 }
