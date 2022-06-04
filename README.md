@@ -10,7 +10,7 @@
 실행과정<br/>
 1. 카카오 챗봇에 연결한다. 위 링크 혹은 카카오톡 채널명 '1TRY'로 접속
 2. '뭐먹지' 입력
-<img src="https://user-images.githubusercontent.com/51365114/119627750-716f3100-be47-11eb-8e83-686b23c2c161.png](https://user-images.githubusercontent.com/81512557/172003549-4fc626e2-bfa1-4c8e-9b4b-62f09a666d78.jpeg"  width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/81512557/172003549-4fc626e2-bfa1-4c8e-9b4b-62f09a666d78.jpeg"  width="200" height="400"/>
 
 4. 3가지의 질문을 챗봇과 주고 받는다.
 ![KakaoTalk_Photo_2022-06-04-22-43-02 002](https://user-images.githubusercontent.com/81512557/172003553-5e2a4c0b-7ed8-42a2-8ef0-65c1fc96229b.jpeg){: width="100" height="200"}
