@@ -22,7 +22,7 @@
 <img src="https://user-images.githubusercontent.com/81512557/172003618-271366ad-66b3-4a0e-bec9-d08f42f48002.jpeg"  width="300" height="600"/>
 
 8. 위치정보를 입력한다.
-<img src="https://user-images.githubusercontent.com/81512557/172003638-fbd14322-c450-496b-9ae1-c5ee7c368fe1.jpeg"  width="300" height="600"/>
+<img src="https://user-images.githubusercontent.com/81512557/172003638-fbd14322-c450-496b-9ae1-c5ee7c368fe1.jpeg"  width="600" height="300"/>
 
 10. 음식점 확인
 <img src="https://user-images.githubusercontent.com/81512557/172003652-43acd595-7c0e-4fb3-9e59-e3b7ff0c6e54.jpeg"  width="300" height="600"/>
