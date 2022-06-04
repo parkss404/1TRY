@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.a1try.R;
 
 public class XOXResult extends AppCompatActivity {
+    
+    private Button btn_212;
 
     @Override
     protected void onCreate(@Nullable Bundle saveInstanceState) {
@@ -20,5 +22,17 @@ public class XOXResult extends AppCompatActivity {
             int n= random.nextInt(XOXtxt.length-1);
 
             XOX.setText(XOXtxt[n]);
+        
+            btn_212.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String[] XOXtxt=getResources().getStringArray(R.array.XOXtxt);
+                    Random random=new Random();
+                    int n= random.nextInt(XOXtxt.length);
+
+                    XOX.setText(XOXtxt[n]);
+                }
+            });
+        
     }
 }
