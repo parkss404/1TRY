@@ -13,5 +13,13 @@ public class OXXResult extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.activity_result122);
+        
+        TextView OXX=findViewById(R.id.OXX);
+        
+        String[] OXXtxt=getResources().getStringArray(R.array.OXXtxt);
+                Random random=new Random();
+                int n= random.nextInt(OXXtxt.length);
+
+                OXX.setText(OXXtxt[n]);
     }
 }
