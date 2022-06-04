@@ -15,7 +15,7 @@ placeBack=["병천토종순대 직영점","서민냉면얼큰칼국수","덮밥"
 
 listRestaurantPlace=[placeFront,placeMid,placeLeft,placeBack]
 
-foodImgUrl=["장터순대국밥:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
+foodImgUrlMid=["장터순대국밥:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
            "육쌈냉면 충북대점:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjVfMTQ3%2FMDAxNjUwODgwMDM2NTE5.7SRcimmKwoe7IAer_aFQAe6dzufDso0RQoHbDQ9ILtYg.lnKyBTMDA3JqkJIfPSzl4Wr4zG41C8H4Ge6rt5sxrvIg.JPEG%2Fupload_6d456ce3af79e192ec904c8842475724.jpeg",
            "요리조리쿡쿡:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjJfMTk3%2FMDAxNjEzOTkyMTE1MTY4.IDAF_RH0t7YWBlDIZWiPKBqMOZQufBSxxI5wJpAF0Ycg.Wpc8lr1iC072nNH_bRAh8AWMSdF03zy8UYJTEVgfbSkg.JPEG.my_jk%2FIMG_5387.jpg",
            "월미당:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220313_144%2F1647143429177FwHB4_JPEG%2Fupload_0f43e5df4c64d34d2f2e8edbac3507eb.jpeg",
@@ -37,13 +37,13 @@ foodImgUrl=["장터순대국밥:https://search.pstatic.net/common/?autoRotate=tr
            "은하수식당:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220321_245%2F164784083154595B7w_JPEG%2Fupload_e2caeb2872f2b4228c1f73aee4a8cc14.jpg",
            "곱창다방:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTJfMjk3%2FMDAxNjUyMzM1NTM2NDAy.apZToWVXvjX9ZCbUoj0sPw_mNucPrPs2tiZ7n5X7RNog.gHIt-fPkboZo7qP-5zIiIrKpl4jctcTSFrhChl7ZkUYg.JPEG.dlsrlrhdwb%2F20220507%25A3%25DF192353.jpg",
            "짚신스시&롤:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODExMTNfMjY1%2FMDAxNTQyMTE0ODExMzM3.rZDdOkpoKmWg_ztVJOnVopP4OfmJXhv84fUu1WvP_Tkg.q9BMLpM9icx_ySvZ1QtTY2FzF7wFTZ1MwFhyYr32IVEg.JPEG.syh9158%2F1542114621991.jpg",
-           "이런이궈:",
-           "한가네짬뽕:",
-           "누구나홀딱반한닭:",
-           "등촌칼국수:",
+           "이런이궈:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDNfMjkw%2FMDAxNjA0NDE0NDA5MTk3.UN5u52MOIPkfgQyX4vXTEaqsOMXuPDk_mHBqNz8oH1Qg.cBhwW02KwOnNPCMgVVsJC7G5D37puICiE03V1eJQigsg.JPEG.lsy960423%2FIMG_7298.jpg",
+           "한가네짬뽕:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20160806_228%2Fsuyony1004_1470415420520zmYM2_JPEG%2FP20160708_144842360_3B51E754-62C5-4FBD-BD23-656B05736FA1.JPG",
+           "누구나홀딱반한닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20151115_226%2Fhello_myboo_14475260908460p4Nd_JPEG%2FNaverBlog_20151115_033450_15.jpg",
+           "등촌칼국수:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MDdfMTg2%2FMDAxNjQ5MzIxNjQwNTIx.4GrMNIoC5zJh6JvFjdOOlRfEn9pSR1uK0d88JZ5SN-Eg.R5m7EUS56arFfx_fCk4plfj1bvbPmYMTy5_X6psU7kgg.JPEG.wldud5839%2F1649321012575.jpg",
            "삼겹살:"]
 
-foodMapUrl=["장터순대국밥:https://map.naver.com/v5/search/%EC%9E%A5%ED%84%B0%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5/place/37683659?c=14188800.0964972,4388091.7322557,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+foodMapUrlMid=["장터순대국밥:https://map.naver.com/v5/search/%EC%9E%A5%ED%84%B0%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5/place/37683659?c=14188800.0964972,4388091.7322557,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
            "육쌈냉면 충북대점:https://map.naver.com/v5/entry/place/21290001?c=14188335.3376231,4387961.7934544,17,0,0,0,dh"
            "요리조리쿡쿡:https://map.naver.com/v5/search/%EC%9A%94%EB%A6%AC%EC%A1%B0%EB%A6%AC%EC%BF%A1%EC%BF%A1/place/17342940?c=14188462.3197663,4387933.6058072,17,0,0,0,dh&isCorrectAnswer=true",
            "월미당:https://map.naver.com/v5/search/%EC%9B%94%EB%AF%B8%EB%8B%B9/place/1226472334?c=14188373.3420973,4387893.6133231,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
@@ -65,8 +65,8 @@ foodMapUrl=["장터순대국밥:https://map.naver.com/v5/search/%EC%9E%A5%ED%84%
            "은하수식당:https://map.naver.com/v5/search/%EC%9D%80%ED%95%98%EC%88%98%EC%8B%9D%EB%8B%B9/place/1751526576?c=14188178.6331759,4387932.6347774,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
            "곱창다방:https://map.naver.com/v5/search/%EA%B3%B1%EC%B0%BD%EB%8B%A4%EB%B0%A9/place/1786485744?c=14188371.5943813,4387871.8762292,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
            "짚신스시&롤:https://map.naver.com/v5/entry/place/1438031726?c=14188407.4169934,4387911.2998871,16,0,0,0,dh",
-           "이런이궈:",
-           "한가네짬뽕:",
-           "누구나홀딱반한닭:",
-           "등촌칼국수:",
+           "이런이궈:https://map.naver.com/v5/search/%EC%9D%B4%EB%9F%B0%EC%9D%B4%EA%B6%88/place/1119514041?c=14188489.0475760,4387948.3654715,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+           "한가네짬뽕:https://map.naver.com/v5/search/%ED%95%9C%EA%B0%80%EB%84%A4%EC%A7%AC%EB%BD%95/place/37944259?c=14188203.3127071,4387937.2124902,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+           "누구나홀딱반한닭:https://map.naver.com/v5/entry/place/36341085?c=14188363.3456070,4387964.6788083,16,0,0,0,dh",
+           "등촌칼국수:https://map.naver.com/v5/search/%EB%93%B1%EC%B4%8C%EC%B9%BC%EA%B5%AD%EC%88%98/place/17401759?c=14188409.2537650,4388070.7161047,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
            "삼겹살:"]
