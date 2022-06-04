@@ -112,7 +112,10 @@ foodimg = [
     #누구나홀딱반한닭:       
     "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20151115_226%2Fhello_myboo_14475260908460p4Nd_JPEG%2FNaverBlog_20151115_033450_15.jpg",
     #나릿집:       
-    "https://map.naver.com/v5/entry/place/748715743?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&entry=plt"],
+    "https://map.naver.com/v5/entry/place/748715743?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&entry=plt"
+    #나릿집:       
+    "https://map.naver.com/v5/entry/place/748715743?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&entry=plt"
+  ],
           ["순돌이뚱글이순대:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA2MTZfMjcg%2FMDAxNTI5MTUzMDcxMjAz.QvQZHuvUcz8xyyxh_KL7mYsyxhOxjJEQj2hmt34wIfAg.DjWnwvlmc6ug_kQAhEjsiGhmwSSsETVBbIIwc-auuPwg.JPEG.since950513%2FIMG_4864.jpg",
                 "냉면",
                 "덮밥",
