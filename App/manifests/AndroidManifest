@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.a1try">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.1try"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".question1.Question1"/>
+        <activity android:name=".question2.Question2O"/>
+        <activity android:name=".question2.Question2X"/>
+        <activity android:name=".question3.Question3OO"/>
+        <activity android:name=".question3.Question3OX"/>
+        <activity android:name=".question3.Question3XO"/>
+        <activity android:name=".question3.Question3XX"/>
+        <activity android:name=".result.OXXResult"/>
+        <activity android:name=".result.OXOResult"/>
+        <activity android:name=".result.OOOResult"/>
+        <activity android:name=".result.OOXResult"/>
+        <activity android:name=".result.XOOResult"/>
+        <activity android:name=".result.XOXResult"/>
+        <activity android:name=".result.XXOResult"/>
+        <activity android:name=".result.XXXResult"/>
+
+    </application>
+
+</manifest>
