@@ -264,7 +264,7 @@ def index():
                                   ]
             }
         }
-      
+      list = [""]
     elif content == u"매운거 별로에요":
       Q3number = 0
       keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
@@ -283,7 +283,7 @@ def index():
                     
             }
         }
-      
+      list = [""]
     else:
         dataSend = {
             "version" : "2.0",
@@ -298,7 +298,7 @@ def index():
             }
         }
     return jsonify(dataSend)
-
+  
   
 @app.route('/message', methods=['POST'])
 def Message():
