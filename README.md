@@ -27,10 +27,10 @@
 10. 음식점 확인
 <img src="https://user-images.githubusercontent.com/81512557/172003652-43acd595-7c0e-4fb3-9e59-e3b7ff0c6e54.jpeg"  width="500" height="600"/>
 
-(1)네이버 지도 연결기능
+(1)네이버 지도 연결기능<br/>
 <img src="https://user-images.githubusercontent.com/81512557/172003661-34565100-51db-4947-b9f7-54be0e5f2aae.jpeg"  width="300" height="600"/>
 
-(2)공유기능
+(2)공유기능<br/>
 <img src="https://user-images.githubusercontent.com/81512557/172003672-6fc8ea72-8ef1-455c-ac58-fce05316b03e.jpeg"  width="300" height="600"/>
 
    
