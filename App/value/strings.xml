@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">1try</string>
+
+    <string-array name="OOOtxt">
+        <item>야채곱창</item>
+        <item>닭강정</item>
+        <item>쭈꾸미</item>
+    </string-array>
+
+    <string-array name="OOXtxt">
+        <item>떡볶이</item>
+        <item>마라탕</item>
+    </string-array>
+
+    <string-array name="OXOtxt">
+        <item>돈가스</item>
+        <item>스시</item>
+        <item>삼겹살</item>
+        <item>4번메뉴</item>
+        <item>5번메뉴</item>
+    </string-array>
+
+    <string-array name="OXXtxt">
+        <item>국밥</item>
+        <item>김밥</item>
+        <item>냉면</item>
+        <item>덮밥</item>
+        <item>만두</item>
+        <item>샌드위치</item>
+        <item>쌀국수</item>
+        <item>파스타</item>
+        <item>햄버거</item>
+        <item>칼국수</item>
+    </string-array>
+
+    <string-array name="XOOtxt">
+        <item>닭발</item>
+        <item>닭볶음탕</item>
+        <item>찜닭</item>
+        <item>불족발</item>
+        <item>아구찜</item>
+        <item>매운치킨</item>
+    </string-array>
+
+    <string-array name="XOXtxt">
+        <item>부대찌개</item>
+        <item>짬뽕</item>
+    </string-array>
+
+    <string-array name="XXOtxt">
+        <item>치킨</item>
+        <item>회</item>
+        <item>보쌈</item>
+        <item>족발</item>
+        <item>막창</item>
+    </string-array>
+
+    <string-array name="XXXtxt">
+        <item>짜장면</item>
+        <item>피자</item>
+    </string-array>
+</resources>
