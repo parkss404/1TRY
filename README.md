@@ -7,7 +7,7 @@
 2. 챗봇과의 대화를 통해, 무엇을 먹을지부터 어디서 먹을지까지 1try에 정해줍니다.
 3. 선배들과 우리 학교 학생들이 추천하는 인증된 맛집 만을 추천합니다.
 
-실행과정<br/>
+설치 및 실행과정<br/>
 1. 카카오 챗봇에 연결한다. 위 링크 혹은 카카오톡 채널명 '1TRY'로 접속
 2. '뭐먹지' 입력
 <img src="https://user-images.githubusercontent.com/81512557/172003549-4fc626e2-bfa1-4c8e-9b4b-62f09a666d78.jpeg"  width="300" height="600"/>
@@ -42,3 +42,9 @@
 박성준 Contact:salley404@naver.com <br/>
 김태완 Contact:mytae1@naver.com <br/>
 김가은 Contact:rkdmsdl782@naver.com <br/>
+
+### Other
+의존성 
+python 3.x
+flask 2.x
+
