@@ -8,6 +8,8 @@ import com.example.a1try.R;
 
 public class OXOResult extends AppCompatActivity {
 
+    private Button btn_121;
+    
     @Override
     protected void onCreate(@Nullable Bundle saveInstanceState) {
         super.onCreate(saveInstanceState);
@@ -20,5 +22,16 @@ public class OXOResult extends AppCompatActivity {
         int n= random.nextInt(OXOtxt.length-1);
 
         OXO.setText(OXOtxt[n]);
+        
+        btn_121.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] OXOtxt=getResources().getStringArray(R.array.OXOtxt);
+                Random random=new Random();
+                int n= random.nextInt(OXOtxt.length);
+
+                OXO.setText(OXOtxt[n]);
+            }
+        });
     }
 }
