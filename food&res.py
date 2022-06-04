@@ -67,13 +67,6 @@ Q3 = {
             }
 }
 
-A = {
-      "version" : "2.0",
-                 "template" : {
-                   "outputs" : [{"simpleText": {"text": "안녕하세요 "}}]
-                              }
-    }
-    
 
 @app.route('/food', methods=['POST'])
 def index():
@@ -99,8 +92,18 @@ def index():
       Q1number = 1
     
     elif content == u"혼밥입니다":
-      dataSend = Q2
+      dataSend = {
+  "version" : "2.0",
+            "template" : {
+                "outputs" : [{"simpleText": {"text": "Q2. 고기가 땡기나요? \n2/3" }}], 
+                 "quickReplies": [{"label": "고기 괜찮아요", "action": "message", "messageText": "고기 괜찮아요"},
+                                  {"label": "고기 별로에요", "action": "message", "messageText": "고기 별로에요"},
+                                  ]
+            }
+}
+      
       Q1number = 0
+      print(Q1number)
     elif content == u"고기 괜찮아요": 
       dataSend = Q3
       Q2number = 1
@@ -277,7 +280,6 @@ def Message():
         dataSend = {
           "version": "2.0",
                             "template": {"outputs": [{'basicCard': {"title": Restaurant[locationkey][foodkey],
-                                                                    "description": "가성비 맛집 소.신.보.부",
                                                                     "thumbnail": {"imageUrl": foodimg[locationkey][foodkey],
                                                                                   "link": {"web": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
                                                                                            }},
@@ -302,17 +304,28 @@ def Message():
     elif content == u"서문":
         locationkey = 1
         dataSend = {
-            "version" : "2.0",
-            "template" : {
-                "outputs" : [
-                    {
-                        "simpleText" : {
-                            "text" : Restaurant[locationkey][foodkey]
-                        }
-                    }
-                ]
-            }
-        }
+          "version": "2.0",
+                            "template": {"outputs": [{'basicCard': {"title": Restaurant[locationkey][foodkey],
+                                                                    "thumbnail": {"imageUrl": foodimg[locationkey][foodkey],
+                                                                                  "link": {"web": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
+                                                                                           }},
+                                                                    "buttons": [
+                                                
+                                                                        {
+                                                                            "action": "webLink",
+                                                                            "label": "가게정보보기",
+                                                                            "webLinkUrl": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
+                                                                        },
+                                                                        {
+                                                                            "action": "share",
+                                                                            "label": "공유하기",
+                                                                        }
+                                                                    ]
+                                                                    }
+                                                      }
+                                                     ]
+                                         }
+                            }
 
     elif content == u"정문":
         locationkey = 2
