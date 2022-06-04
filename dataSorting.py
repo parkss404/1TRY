@@ -14,3 +14,22 @@ placeFront=["청주직지감자탕뼈찜","강남면옥","덮밥","쌀국수","�
 placeBack=["병천토종순대 직영점","서민냉면얼큰칼국수","덮밥","쌀국수","파스타","햄버거","짜장면","에꿍이치킨","팔팔어시장","잭아저씨족발&보쌈모충점","닭강정에반하다 모충점","서울닭발","닭볶음탕","찜닭","떡보라","피자마루 청주개신사직점","해송족발","부대찌개","쭈닭","김우동","막창선생","초밥한조각 사직점","마라탕","면세상","가마꿉","일심칼국수","착한생고기앤쭈꾸미"]
 
 listRestaurantPlace=[placeFront,placeMid,placeLeft,placeBack]
+
+foodImgUrl=["장터순대국밥:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
+           "육쌈냉면 충북대점:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjVfMTQ3%2FMDAxNjUwODgwMDM2NTE5.7SRcimmKwoe7IAer_aFQAe6dzufDso0RQoHbDQ9ILtYg.lnKyBTMDA3JqkJIfPSzl4Wr4zG41C8H4Ge6rt5sxrvIg.JPEG%2Fupload_6d456ce3af79e192ec904c8842475724.jpeg",
+           "요리조리쿡쿡:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjJfMTk3%2FMDAxNjEzOTkyMTE1MTY4.IDAF_RH0t7YWBlDIZWiPKBqMOZQufBSxxI5wJpAF0Ycg.Wpc8lr1iC072nNH_bRAh8AWMSdF03zy8UYJTEVgfbSkg.JPEG.my_jk%2FIMG_5387.jpg",
+           "월미당:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220313_144%2F1647143429177FwHB4_JPEG%2Fupload_0f43e5df4c64d34d2f2e8edbac3507eb.jpeg",
+           "모퉁이파스타:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MDZfMTU0%2FMDAxNTMwODM2NTU3NDYx.I_-hpWuPnNwdXV-XGB5ki1how-E7aPbfMPZGnl50gTQg.lb_8l_YjBuxOGf-wkVM8hkhwYbzUDcg9k0EaC79obsEg.JPEG.azml89%2FIMG_5724.jpg",
+           "버거킹:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjdfOTEg%2FMDAxNjUxMDY2NjMyNjk3.Wx0W65HSXErlHff7Oz0RCaLiVmVaWsjRVvo6d0y-I0Eg.E5Ti_ZkcRPSFmlkoOq-D0W8XZZAWse26lpB-6-VVMZEg.JPEG%2Fupload_893d9228811e4c4d0ebaf3ebfc94ea36.jpg",
+           "한가네짬뽕:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA4MjBfMTI5%2FMDAxNTk3OTI5MDYzMDU4.s5EFI1Gs7zPWDjtIKEz4PcM1bjwYkgOxd2qtnGQJ4EMg.ga7XslfOPlU7_3qV-NsP29por4Sr8Q7gdRFvpw6aHL4g.JPEG.heykzzang%2FKakaoTalk_20200820_214524819_06.jpg",
+           "아웃닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220416_205%2F1650036326644MCGoW_JPEG%2Fupload_17e033ab11c59aa115f9f5b0fb81b43c.jpg"]
+
+foodMapUrl=["장터순대국밥:https://map.naver.com/v5/search/%EC%9E%A5%ED%84%B0%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5/place/37683659?c=14188800.0964972,4388091.7322557,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+           "육쌈냉면 충북대점:https://map.naver.com/v5/entry/place/21290001?c=14188335.3376231,4387961.7934544,17,0,0,0,dh"
+           "요리조리쿡쿡:https://map.naver.com/v5/search/%EC%9A%94%EB%A6%AC%EC%A1%B0%EB%A6%AC%EC%BF%A1%EC%BF%A1/place/17342940?c=14188462.3197663,4387933.6058072,17,0,0,0,dh&isCorrectAnswer=true",
+           "월미당:https://map.naver.com/v5/search/%EC%9B%94%EB%AF%B8%EB%8B%B9/place/1226472334?c=14188373.3420973,4387893.6133231,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+           "모퉁이파스타:https://map.naver.com/v5/search/%EB%AA%A8%ED%89%81%EC%9D%B4%ED%8C%8C%EC%8A%A4%ED%83%80?c=14188609.5063970,4387901.6034849,17,0,0,0,dh",
+           "버거킹:https://map.naver.com/v5/search/%EB%B2%84%EA%B1%B0%ED%82%B9?c=14188573.6726529,4388047.3140102,16,0,0,0,dh",
+           "한가네짬뽕:https://map.naver.com/v5/search/%ED%95%9C%EA%B0%80%EB%84%A4%EC%A7%AC%EB%BD%95/place/37944259?c=14188355.5866385,4387981.4083276,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+           "아웃닭:https://map.naver.com/v5/search/%EC%95%84%EC%9B%83%EB%8B%AD/place/36379006?c=14188269.2917692,4388092.2455220,16,0,0,0,dh",
+           "싱싱오징어바다:"]
