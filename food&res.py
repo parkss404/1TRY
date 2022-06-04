@@ -356,17 +356,28 @@ def Message():
     elif content == u"후문":
         locationkey = 3
         dataSend = {
-            "version" : "2.0",
-            "template" : {
-                "outputs" : [
-                    {
-                        "simpleText" : {
-                            "text" : Restaurant[locationkey][foodkey]
-                        }
-                    }
-                ]
-            }
-        }
+          "version": "2.0",
+                            "template": {"outputs": [{'basicCard': {"title": Restaurant[locationkey][foodkey],
+                                                                    "thumbnail": {"imageUrl": foodimg[locationkey][foodkey],
+                                                                                  "link": {"web": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
+                                                                                           }},
+                                                                    "buttons": [
+                                                
+                                                                        {
+                                                                            "action": "webLink",
+                                                                            "label": "가게정보보기",
+                                                                            "webLinkUrl": "https://map.naver.com/v5/entry/place/926739775?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&placePath=%2Fhome&entry=plt"
+                                                                        },
+                                                                        {
+                                                                            "action": "share",
+                                                                            "label": "공유하기",
+                                                                        }
+                                                                    ]
+                                                                    }
+                                                      }
+                                                     ]
+                                         }
+                            }
       
     else:
         dataSend = {
