@@ -6,10 +6,56 @@ app = Flask(__name__)
 foodURL = [
   [ #장터국밥
     "https://map.naver.com/v5/search/%EC%9E%A5%ED%84%B0%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5/place/37683659?c=14188800.0964972,4388091.7322557,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
-    "육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다",
+    #육쌈냉면 충북대점
+    "https://map.naver.com/v5/entry/place/21290001?c=14188335.3376231,4387961.7934544,17,0,0,0,dh",
+    #요리조리쿡쿡
+    "https://map.naver.com/v5/search/%EC%9A%94%EB%A6%AC%EC%A1%B0%EB%A6%AC%EC%BF%A1%EC%BF%A1/place/17342940?c=14188462.3197663,4387933.6058072,17,0,0,0,dh&isCorrectAnswer=true",
+    #월미당
+    "https://map.naver.com/v5/search/%EC%9B%94%EB%AF%B8%EB%8B%B9/place/1226472334?c=14188373.3420973,4387893.6133231,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #모퉁이파스타
+    "https://map.naver.com/v5/search/%EB%AA%A8%ED%89%81%EC%9D%B4%ED%8C%8C%EC%8A%A4%ED%83%80?c=14188609.5063970,4387901.6034849,17,0,0,0,dh",
+    #버거킹
+    "https://map.naver.com/v5/search/%EB%B2%84%EA%B1%B0%ED%82%B9?c=14188573.6726529,4388047.3140102,16,0,0,0,dh",
+    #한가네짬뽕
+    "https://map.naver.com/v5/search/%ED%95%9C%EA%B0%80%EB%84%A4%EC%A7%AC%EB%BD%95/place/37944259?c=14188355.5866385,4387981.4083276,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #아웃닭
+    "https://map.naver.com/v5/search/%EC%95%84%EC%9B%83%EB%8B%AD/place/36379006?c=14188269.2917692,4388092.2455220,16,0,0,0,dh",
+    #싱싱오징어바다
+    "https://map.naver.com/v5/search/%EC%8B%B1%EC%8B%B1%EC%98%A4%EC%A7%95%EC%96%B4%EB%B0%94%EB%8B%A4/place/34188345?c=14188642.9356401,4388005.5038752,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
     #소신보부
     "https://map.naver.com/v5/entry/place/926739775?c=14188547.3901211,4388028.7949023,17,0,0,0,dh",
-           "우리집 닭강정:https://map.naver.com/v5/search/%EC%9A%B0%EB%A6%AC%EC%A7%91%EB%8B%AD%EA%B0%95%EC%A0%95/place/38612298?c=14188382.0138856,4388153.2966377,16,0,0,0,dh&placePath=%3Fentry%253Dpll","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","피자웨이브","족발","부대찌개","쭈꾸미","은화수식당","막창","짚신스시&롤","이런이궈","한가네짬뽕","매운치킨","등촌칼국수"],
+    #우리집 닭강정:       
+    "https://map.naver.com/v5/search/%EC%9A%B0%EB%A6%AC%EC%A7%91%EB%8B%AD%EA%B0%95%EC%A0%95/place/38612298?c=14188382.0138856,4388153.2966377,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #코리아 닭발
+    "https://map.naver.com/v5/search/%EC%BD%94%EB%A6%AC%EC%95%84%EB%8B%AD%EB%B0%9C/place/1707433717?c=14188401.1274422,4387937.7396209,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #안녕닭
+    "https://map.naver.com/v5/search/%EC%95%88%EB%85%95%EB%8B%AD/place/1460495164?c=14188402.1070537,4387987.4426133,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #일미리금계찜닭
+    "https://map.naver.com/v5/search/%EC%9D%BC%EB%AF%B8%EB%A6%AC%EA%B8%88%EA%B3%84%EC%B0%9C%EB%8B%AD/place/1767731763?c=14188279.0878844,4387878.7566319,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #쩔어떡볶이포차
+    "https://map.naver.com/v5/entry/place/1956461738?c=14188471.3811728,4388082.3963631,17,0,0,0,dh",
+    #피자 웨이브
+    "https://map.naver.com/v5/search/%ED%94%BC%EC%9E%90%EC%9B%A8%EC%9D%B4%EB%B8%8C/place/1437077056?c=14188472.1492773,4388006.4194238,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #홍스족발
+    "https://map.naver.com/v5/search/%ED%99%8D%EC%8A%A4%EC%A1%B1%EB%B0%9C/place/1276617246?c=14188366.1953860,4387982.9481105,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #부대통령뚝배기 충북대중문점
+    "https://map.naver.com/v5/entry/place/1641995762?c=14188379.9210792,4387913.0893529,17,0,0,0,dh",
+    #바다향쭈꾸미낙지볶음
+    "https://map.naver.com/v5/entry/place/37758290?c=14188788.9422842,4388012.6479311,17,0,0,0,dh",
+    #은화수식당
+    "https://map.naver.com/v5/search/%EC%9D%80%ED%95%98%EC%88%98%EC%8B%9D%EB%8B%B9/place/1751526576?c=14188178.6331759,4387932.6347774,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #곱창다방
+    "https://map.naver.com/v5/search/%EA%B3%B1%EC%B0%BD%EB%8B%A4%EB%B0%A9/place/1786485744?c=14188371.5943813,4387871.8762292,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #짚신스시&롤
+    "https://map.naver.com/v5/entry/place/1438031726?c=14188407.4169934,4387911.2998871,16,0,0,0,dh",
+    #이런이궈
+    "https://map.naver.com/v5/search/%EC%9D%B4%EB%9F%B0%EC%9D%B4%EA%B6%88/place/1119514041?c=14188489.0475760,4387948.3654715,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #한가네짬뽕
+    "https://map.naver.com/v5/search/%ED%95%9C%EA%B0%80%EB%84%A4%EC%A7%AC%EB%BD%95/place/37944259?c=14188203.3127071,4387937.2124902,16,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    #누구나홀딱반한닭
+    "https://map.naver.com/v5/entry/place/36341085?c=14188363.3456070,4387964.6788083,16,0,0,0,dh",
+    #나릿집
+    "https://d12zq4w4guyljn.cloudfront.net/pre_20191129062847024_photo_97428385fcd8.jpg"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","쩔어떡볶이포차","청년피자","큰손족발","땅스부대찌개","초사골불타는쭈꾸미낙지""False","False","False","False","False"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","파파돈","대구전봇대막창","짚신스시","탕화쿵푸"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","면세상","가마꿉"]
