@@ -11,7 +11,8 @@ foodURL = [
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","면세상","가마꿉"]
 ]
 
-foodimg = [["https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
+foodimg = [
+  ["https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
            "육쌈냉면 충북대점:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjVfMTQ3%2FMDAxNjUwODgwMDM2NTE5.7SRcimmKwoe7IAer_aFQAe6dzufDso0RQoHbDQ9ILtYg.lnKyBTMDA3JqkJIfPSzl4Wr4zG41C8H4Ge6rt5sxrvIg.JPEG%2Fupload_6d456ce3af79e192ec904c8842475724.jpeg",
            "요리조리쿡쿡:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjJfMTk3%2FMDAxNjEzOTkyMTE1MTY4.IDAF_RH0t7YWBlDIZWiPKBqMOZQufBSxxI5wJpAF0Ycg.Wpc8lr1iC072nNH_bRAh8AWMSdF03zy8UYJTEVgfbSkg.JPEG.my_jk%2FIMG_5387.jpg",
            "월미당:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220313_144%2F1647143429177FwHB4_JPEG%2Fupload_0f43e5df4c64d34d2f2e8edbac3507eb.jpeg",
@@ -37,6 +38,36 @@ foodimg = [["https://search.pstatic.net/common/?autoRotate=true&quality=95&type=
            "한가네짬뽕:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20160806_228%2Fsuyony1004_1470415420520zmYM2_JPEG%2FP20160708_144842360_3B51E754-62C5-4FBD-BD23-656B05736FA1.JPG",
            "누구나홀딱반한닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20151115_226%2Fhello_myboo_14475260908460p4Nd_JPEG%2FNaverBlog_20151115_033450_15.jpg",
            "나릿집:https://map.naver.com/v5/entry/place/748715743?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&entry=plt"],
+          ["순돌이뚱글이순대:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA2MTZfMjcg%2FMDAxNTI5MTUzMDcxMjAz.QvQZHuvUcz8xyyxh_KL7mYsyxhOxjJEQj2hmt34wIfAg.DjWnwvlmc6ug_kQAhEjsiGhmwSSsETVBbIIwc-auuPwg.JPEG.since950513%2FIMG_4864.jpg",
+                "냉면",
+                "덮밥",
+                "쌀국수",
+                "올엔조이https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200310_184%2F1583829765418l18up_JPEG%2FcNVWryvUWVRjIpS8oZfQWIoG.jpg",
+                "햄버거",
+                "장군반점https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA0MjdfMTQ2%2FMDAxNTg3OTY2NDMwMjc1.18KrOHxynws_TqoqtyX8d7WiOIDuVsji1ZdPuOH-YGMg.dwMFoKKgGZi0xfe_ux0VqXVKZHYS3N4yjG_VwQ5eTgAg.JPEG.coco1938%2FIMG_6420.jpg",
+                "가마꿉 청주충북대점https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MzFfMjI1%2FMDAxNjU0MDAyMzc5ODQx.LO8xJU16SK42PzirrqdiyVVh-yStIDiy1xvBuH3jNBgg.0fu5liS4SWQdGPqiiDmk41Tr2O0lc1_1jO0mtQlOtMsg.JPEG.hej051109%2Foutput_3750848045.jpg",
+                "수산시장https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA5MDZfMTE3%2FMDAxNTk5Mzc0MTAyNjYx.xtbS7g51-cTpQLVQPJMA_VW6Ry7UCJGMHSuyhuoZGNAg.msmdCme7K75xEh1Mk1iHNNWK9nyI7i9Jwk60TVj3Ljkg.JPEG.mko0506%2F1599374101603.jpg",
+                "장충동뚱뚱이할머니족발보쌈https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODAyMDhfNTIg%2FMDAxNTE4MDk5MzE0Mjc1.HsAHDYbgfj6nx5d1DA3pVD51Bya9PPWZxp8m-htAUMkg.9ADamr9alFOdrpZGyceRa6hIl_V48z1cBGGFr2mnm2Mg.JPEG.qogpwltkfkd1%2FIMG_7885.jpg",
+                "닭강정",
+                "신날개 복대점https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MTVfMTM4%2FMDAxNjI2MzUwNjAxMjE1.BLncvF_ajDse2UGv2MRVUNlF0VWNyDGXb1XuPHud0OUg.xCdXtgFiOUFKelmgdVHsKOAqcqkApI1W3QCFQYgsrp4g.JPEG.dbstjdwls82%2F20210715%25A3%25DF182538.jpg",
+                "청주닭갈비&닭떡볶이https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20201108_53%2F1604837417810OcY4H_JPEG%2Fupload_a84a6454d59b392c606f0172de1f1313.jpeg",
+                "찜닭",
+                "청주닭갈비&닭떡볶이https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20201108_53%2F1604837417810OcY4H_JPEG%2Fupload_a84a6454d59b392c606f0172de1f1313.jpeg",
+                "옐로우피자https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MDhfMTYx%2FMDAxNjUxOTg2Mzk5NzYx._TBSSOKnYvQ4uCxObQGM6bX7buEBkC1SZIuQpZ47V8Ug.3ZbiOCgfaBBhYsLfb3yHE-hqxQf9cqGLZZpUedl25YIg.JPEG.bgr2829%2FIMG_7077.jpg",
+                "큰손족발",
+                "땅스부대찌개",
+                "초사골불타는쭈꾸미낙지",
+                "오유미당 청주개신점",
+                "증평은성집",
+                "하루초밥",
+                "마라탕왕훠궈",
+                "비룡각",
+                "매운치킨",
+                "현고들깨손칼국수",
+                "삼겹살"],
+           [],
+           []
+          ]
            
 
 
