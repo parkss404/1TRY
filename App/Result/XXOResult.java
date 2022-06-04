@@ -62,7 +62,9 @@ public class XXOResult extends AppCompatActivity {
                         .setPositiveButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int end) {
-                                finish();
+                                moveTaskToBack(true);
+                                finishAndRemoveTask();
+                                System.exit(0);
                             }
                         });
                 AlertDialog alert=builder.create();
