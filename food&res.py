@@ -11,17 +11,20 @@ foodimg = [
 ]
 
 foodlist =[
-  ["짜장면","피자"],#000
-  ["부대찌개","짬뽕"],#001
-  ["내장류","보쌈","족발","치킨","회"],#010
-  ["닭발","닭볶음탕","등갈비","매운치킨","불족발","아구찜","찜닭"],#011
-  ["국밥","김밥","냉면","덮밥","만두","샌드위치","쌀국수","파스타","햄버거"],#100
-  ["마라탕","맵떡"],#101
-  ["돈가스","삼겹살","스시"],#110
-  ["내장볶음","닭강정","쭈꾸미"],#111
+  ["짜장면6","피자15"],#000
+  ["부대찌개17","짬뽕22"],#001
+  ["보쌈9","족발16","치킨7","회8"],#010
+  ["닭발11","닭볶음탕12","매운치킨23","찜닭13"],#011
+  ["국밥0","냉면1","덮밥2","쌀국수3","파스타4","햄버거5"],#100
+  ["마라탕21","떡볶이1"],#101
+  ["돈까스19","삼겹살","스시20"],#110
+  ["닭강정10","쭈꾸미18"],#111
 ] 
+#0,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18,19,20,21,22 = 22개 
+#1,14,24 
+#냉면,맵떡,매운치킨
 
-list = []
+list = [""]
 
 
 Restaurant = [
@@ -109,12 +112,12 @@ def index():
       keynumber = int(Q1number) * 4 + int(Q2number) * 2 + int(Q3number)       #이진수 -> 10진수 변환
       int(keynumber)
       for i in foodlist[keynumber]:
-        list[0] = list[0] + i
+        list[0] = list[0] + " " + i
       dataSend = {
             "version" : "2.0",
               "template" : {
-                "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n해당 음식을 누르시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
-                 "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
+                "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n이 중 하나 말하시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
+                 "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]}, 
                       
                                   ]
             }
@@ -126,12 +129,12 @@ def index():
       int(keynumber)
       print(keynumber)
       for i in foodlist[keynumber]:
-        list[0] = list[0] + i
+        list[0] = list[0] + " " + i
   
       dataSend = {
             "version" : "2.0",
               "template" : {
-               "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n해당 음식을 누르시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
+               "outputs" : [{"simpleText": {"text": "오늘은 이거 어떠세요? \n이 중 하나 말하시면 충북대학교 주변 맛집을 추천해 드립니다! " }}], 
                  "quickReplies": [{"label": list[0], "action": "message", "messageText": list[0]},
                                   
                                   ]
