@@ -4,7 +4,11 @@ import sys
 app = Flask(__name__)
 
 foodURL = [
-  ["https://map.naver.com/v5/search/%EC%9E%A5%ED%84%B0%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5/place/37683659?c=14188800.0964972,4388091.7322557,17,0,0,0,dh&placePath=%3Fentry%253Dpll","육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다","https://map.naver.com/v5/entry/place/926739775?c=14188547.3901211,4388028.7949023,17,0,0,0,dh",
+  [ #장터국밥
+    "https://map.naver.com/v5/search/%EC%9E%A5%ED%84%B0%EC%88%9C%EB%8C%80%EA%B5%AD%EB%B0%A5/place/37683659?c=14188800.0964972,4388091.7322557,17,0,0,0,dh&placePath=%3Fentry%253Dpll",
+    "육쌈냉면 충북대점","요리조리쿡쿡","월미당","모퉁이파스타","버거킹","한가네짬뽕","아웃닭","싱싱오징어바다",
+    #소신보부
+    "https://map.naver.com/v5/entry/place/926739775?c=14188547.3901211,4388028.7949023,17,0,0,0,dh",
            "우리집 닭강정:https://map.naver.com/v5/search/%EC%9A%B0%EB%A6%AC%EC%A7%91%EB%8B%AD%EA%B0%95%EC%A0%95/place/38612298?c=14188382.0138856,4388153.2966377,16,0,0,0,dh&placePath=%3Fentry%253Dpll","우리집 닭강정","코리아 닭발","안녕닭","일미리금계찜닭","쩔어떡볶이포차","피자웨이브","족발","부대찌개","쭈꾸미","은화수식당","막창","짚신스시&롤","이런이궈","한가네짬뽕","매운치킨","등촌칼국수"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","쩔어떡볶이포차","청년피자","큰손족발","땅스부대찌개","초사골불타는쭈꾸미낙지""False","False","False","False","False"],
 ["False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","False","파파돈","대구전봇대막창","짚신스시","탕화쿵푸"],
@@ -12,32 +16,57 @@ foodURL = [
 ]
 
 foodimg = [
-  ["https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
-           "육쌈냉면 충북대점:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjVfMTQ3%2FMDAxNjUwODgwMDM2NTE5.7SRcimmKwoe7IAer_aFQAe6dzufDso0RQoHbDQ9ILtYg.lnKyBTMDA3JqkJIfPSzl4Wr4zG41C8H4Ge6rt5sxrvIg.JPEG%2Fupload_6d456ce3af79e192ec904c8842475724.jpeg",
-           "요리조리쿡쿡:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjJfMTk3%2FMDAxNjEzOTkyMTE1MTY4.IDAF_RH0t7YWBlDIZWiPKBqMOZQufBSxxI5wJpAF0Ycg.Wpc8lr1iC072nNH_bRAh8AWMSdF03zy8UYJTEVgfbSkg.JPEG.my_jk%2FIMG_5387.jpg",
-           "월미당:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220313_144%2F1647143429177FwHB4_JPEG%2Fupload_0f43e5df4c64d34d2f2e8edbac3507eb.jpeg",
-           "모퉁이파스타:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MDZfMTU0%2FMDAxNTMwODM2NTU3NDYx.I_-hpWuPnNwdXV-XGB5ki1how-E7aPbfMPZGnl50gTQg.lb_8l_YjBuxOGf-wkVM8hkhwYbzUDcg9k0EaC79obsEg.JPEG.azml89%2FIMG_5724.jpg",
-           "버거킹:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjdfOTEg%2FMDAxNjUxMDY2NjMyNjk3.Wx0W65HSXErlHff7Oz0RCaLiVmVaWsjRVvo6d0y-I0Eg.E5Ti_ZkcRPSFmlkoOq-D0W8XZZAWse26lpB-6-VVMZEg.JPEG%2Fupload_893d9228811e4c4d0ebaf3ebfc94ea36.jpg",
-           "한가네짬뽕:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA4MjBfMTI5%2FMDAxNTk3OTI5MDYzMDU4.s5EFI1Gs7zPWDjtIKEz4PcM1bjwYkgOxd2qtnGQJ4EMg.ga7XslfOPlU7_3qV-NsP29por4Sr8Q7gdRFvpw6aHL4g.JPEG.heykzzang%2FKakaoTalk_20200820_214524819_06.jpg",
-           "아웃닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220416_205%2F1650036326644MCGoW_JPEG%2Fupload_17e033ab11c59aa115f9f5b0fb81b43c.jpg",
-           "싱싱오징어바다:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMTVfNTIg%2FMDAxNTc2NDA4MzIxNDE0.YjY1sepfxPzA2UZ_1pKGoMMs2YaTLVgStjd-vdlvgI8g.fNyBVUHdXSRXyFzIqbxfNoqaoxOKEVW-6vqybEWlCsgg.JPEG.92__sook%2FIMG_2872.jpg",
+  [#장터국밥
+   "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
+   #육쌈냉면 충북대점
+   "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjVfMTQ3%2FMDAxNjUwODgwMDM2NTE5.7SRcimmKwoe7IAer_aFQAe6dzufDso0RQoHbDQ9ILtYg.lnKyBTMDA3JqkJIfPSzl4Wr4zG41C8H4Ge6rt5sxrvIg.JPEG%2Fupload_6d456ce3af79e192ec904c8842475724.jpeg",
+   #요리조리쿡쿡        
+   "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjJfMTk3%2FMDAxNjEzOTkyMTE1MTY4.IDAF_RH0t7YWBlDIZWiPKBqMOZQufBSxxI5wJpAF0Ycg.Wpc8lr1iC072nNH_bRAh8AWMSdF03zy8UYJTEVgfbSkg.JPEG.my_jk%2FIMG_5387.jpg",
+   #월미당        
+   "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220313_144%2F1647143429177FwHB4_JPEG%2Fupload_0f43e5df4c64d34d2f2e8edbac3507eb.jpeg",
+   #모퉁이파스타
+   "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA3MDZfMTU0%2FMDAxNTMwODM2NTU3NDYx.I_-hpWuPnNwdXV-XGB5ki1how-E7aPbfMPZGnl50gTQg.lb_8l_YjBuxOGf-wkVM8hkhwYbzUDcg9k0EaC79obsEg.JPEG.azml89%2FIMG_5724.jpg",
+    #버거킹:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMjA0MjdfOTEg%2FMDAxNjUxMDY2NjMyNjk3.Wx0W65HSXErlHff7Oz0RCaLiVmVaWsjRVvo6d0y-I0Eg.E5Ti_ZkcRPSFmlkoOq-D0W8XZZAWse26lpB-6-VVMZEg.JPEG%2Fupload_893d9228811e4c4d0ebaf3ebfc94ea36.jpg",
+    #한가네짬뽕:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA4MjBfMTI5%2FMDAxNTk3OTI5MDYzMDU4.s5EFI1Gs7zPWDjtIKEz4PcM1bjwYkgOxd2qtnGQJ4EMg.ga7XslfOPlU7_3qV-NsP29por4Sr8Q7gdRFvpw6aHL4g.JPEG.heykzzang%2FKakaoTalk_20200820_214524819_06.jpg",
+    #아웃닭:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220416_205%2F1650036326644MCGoW_JPEG%2Fupload_17e033ab11c59aa115f9f5b0fb81b43c.jpg",
+    #싱싱오징어바다:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEyMTVfNTIg%2FMDAxNTc2NDA4MzIxNDE0.YjY1sepfxPzA2UZ_1pKGoMMs2YaTLVgStjd-vdlvgI8g.fNyBVUHdXSRXyFzIqbxfNoqaoxOKEVW-6vqybEWlCsgg.JPEG.92__sook%2FIMG_2872.jpg",
            "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220315_185%2F1647313153278poCw7_JPEG%2Fupload_d3039ad0f8de6590e63f9d0793e15cb3.jpg",
-           "우리집 닭강정:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzAyMTVfMjMw%2FMDAxNDg3MDkyNDUxNTE1.8SYqyHGCoe-6NW6EyrwgDsYh60RZyBvEw9Ti5LbQCEAg.3UdNKcYm0XkU0-hvvc1bvVByVPtNljtEKNF0M0g2Olwg.JPEG.dh81193%2FIMG_7874.JPG",
-           "코리아닭발:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220410_289%2F1649592619770WHnzf_JPEG%2Fupload_a891ef586f4b44045f50f23850dc2614.jpeg",
-           "안녕닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211109_31%2F1636431113080LrSrz_JPEG%2Fupload_74896edb06c26e2caa4c4b08e8f2a67c.jpg",
-           "일미리금계찜닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTBfMTAx%2FMDAxNjUyMTQ4OTQ3ODY0.-Wa33DcwNaPBkTKB4x8xZNP3W9Apc9RSo-DGoEiRoRAg.VYSt9g8-ZGvwONr0a2NE9YeVyAEYJwMCrXapfMgDsNYg.JPEG.hh0ops%2FKakaoTalk_20220509_133410053_16.jpg"
-           "쩔어떡볶이포차:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MDVfMTg4%2FMDAxNjQ5MDg0NTk2MDMz.PPSuNIqNhi_QGWUUDhnsLDT0uBAC4c1Syj3r4OnEgOkg.NenUnKEHL2pZphUBhLnNbfMYPk0LKef6TFzDwhMCzYAg.JPEG.qwp0923%2F20220327%25A3%25DF222702.jpg"
-           "피자웨이브:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMDJfNzYg%2FMDAxNjQzNzg1OTcyODY3.qXAFw-awCNeFVcTw7ZlbnNrgpkMeAJoAu0ec5ppi95Ag.9NNRZAa01Kd6yTw2k_13j3dE4G6qsiGjHFd4J_ECk_0g.JPEG.ghkdtjswjd11%2FKakaoTalk_20220129_013858410_16.jpg",
-           "홍스족발:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEwMTlfMjMy%2FMDAxNTcxNDU3NzYzMTI4.oC3ekJEVwkBK3v8THeMDv68UW9IOZ2iejzIHpEWqLr4g.nuqzi1JgL_oWJeC75RWZNkfOP-0O1p-m2NT5XSTVf4Ig.JPEG.kwiyongi%2F1571457762114.JPG",
-           "부대통령뚝배기 충북대중문점:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA3MTVfMjky%2FMDAxNTk0NzQ4ODMwOTMz.iChUJRgpmjIKQ3opw6FX1alWCOSFqHGNcO8r3dJicQcg.9QLBeqjNDCc0pGHu_i_7Xl4ylhuGFPHF0UV179kDOp8g.JPEG.instar360%2F1594748830983.jpg",
-           "바다향쭈꾸미낙지볶음:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA1MDlfNCAg%2FMDAxNTU3NDExMzIzNTk3.B5P53qWInd2l3pE9izyqcwOKMVf-yUhydHOIOtt5wHEg.eWhLBCH30D6kqGV9Jyt80JHASrnUg-kfAtitMaq272gg.JPEG.pallorabbit%2F20.JPG",
-           "은하수식당:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220321_245%2F164784083154595B7w_JPEG%2Fupload_e2caeb2872f2b4228c1f73aee4a8cc14.jpg",
-           "곱창다방:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTJfMjk3%2FMDAxNjUyMzM1NTM2NDAy.apZToWVXvjX9ZCbUoj0sPw_mNucPrPs2tiZ7n5X7RNog.gHIt-fPkboZo7qP-5zIiIrKpl4jctcTSFrhChl7ZkUYg.JPEG.dlsrlrhdwb%2F20220507%25A3%25DF192353.jpg",
-           "짚신스시&롤:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODExMTNfMjY1%2FMDAxNTQyMTE0ODExMzM3.rZDdOkpoKmWg_ztVJOnVopP4OfmJXhv84fUu1WvP_Tkg.q9BMLpM9icx_ySvZ1QtTY2FzF7wFTZ1MwFhyYr32IVEg.JPEG.syh9158%2F1542114621991.jpg",
-           "이런이궈:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDNfMjkw%2FMDAxNjA0NDE0NDA5MTk3.UN5u52MOIPkfgQyX4vXTEaqsOMXuPDk_mHBqNz8oH1Qg.cBhwW02KwOnNPCMgVVsJC7G5D37puICiE03V1eJQigsg.JPEG.lsy960423%2FIMG_7298.jpg",
-           "한가네짬뽕:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20160806_228%2Fsuyony1004_1470415420520zmYM2_JPEG%2FP20160708_144842360_3B51E754-62C5-4FBD-BD23-656B05736FA1.JPG",
-           "누구나홀딱반한닭:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20151115_226%2Fhello_myboo_14475260908460p4Nd_JPEG%2FNaverBlog_20151115_033450_15.jpg",
-           "나릿집:https://map.naver.com/v5/entry/place/748715743?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&entry=plt"],
+    #우리집 닭강정:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNzAyMTVfMjMw%2FMDAxNDg3MDkyNDUxNTE1.8SYqyHGCoe-6NW6EyrwgDsYh60RZyBvEw9Ti5LbQCEAg.3UdNKcYm0XkU0-hvvc1bvVByVPtNljtEKNF0M0g2Olwg.JPEG.dh81193%2FIMG_7874.JPG",
+    #코리아닭발:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220410_289%2F1649592619770WHnzf_JPEG%2Fupload_a891ef586f4b44045f50f23850dc2614.jpeg",
+    #안녕닭:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211109_31%2F1636431113080LrSrz_JPEG%2Fupload_74896edb06c26e2caa4c4b08e8f2a67c.jpg",
+    #일미리금계찜닭:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTBfMTAx%2FMDAxNjUyMTQ4OTQ3ODY0.-Wa33DcwNaPBkTKB4x8xZNP3W9Apc9RSo-DGoEiRoRAg.VYSt9g8-ZGvwONr0a2NE9YeVyAEYJwMCrXapfMgDsNYg.JPEG.hh0ops%2FKakaoTalk_20220509_133410053_16.jpg"
+    #쩔어떡볶이포차:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MDVfMTg4%2FMDAxNjQ5MDg0NTk2MDMz.PPSuNIqNhi_QGWUUDhnsLDT0uBAC4c1Syj3r4OnEgOkg.NenUnKEHL2pZphUBhLnNbfMYPk0LKef6TFzDwhMCzYAg.JPEG.qwp0923%2F20220327%25A3%25DF222702.jpg"
+    #피자웨이브:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjAyMDJfNzYg%2FMDAxNjQzNzg1OTcyODY3.qXAFw-awCNeFVcTw7ZlbnNrgpkMeAJoAu0ec5ppi95Ag.9NNRZAa01Kd6yTw2k_13j3dE4G6qsiGjHFd4J_ECk_0g.JPEG.ghkdtjswjd11%2FKakaoTalk_20220129_013858410_16.jpg",
+    #홍스족발:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTEwMTlfMjMy%2FMDAxNTcxNDU3NzYzMTI4.oC3ekJEVwkBK3v8THeMDv68UW9IOZ2iejzIHpEWqLr4g.nuqzi1JgL_oWJeC75RWZNkfOP-0O1p-m2NT5XSTVf4Ig.JPEG.kwiyongi%2F1571457762114.JPG",
+    #부대통령뚝배기 충북대중문점:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA3MTVfMjky%2FMDAxNTk0NzQ4ODMwOTMz.iChUJRgpmjIKQ3opw6FX1alWCOSFqHGNcO8r3dJicQcg.9QLBeqjNDCc0pGHu_i_7Xl4ylhuGFPHF0UV179kDOp8g.JPEG.instar360%2F1594748830983.jpg",
+    #바다향쭈꾸미낙지볶음:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA1MDlfNCAg%2FMDAxNTU3NDExMzIzNTk3.B5P53qWInd2l3pE9izyqcwOKMVf-yUhydHOIOtt5wHEg.eWhLBCH30D6kqGV9Jyt80JHASrnUg-kfAtitMaq272gg.JPEG.pallorabbit%2F20.JPG",
+    #은하수식당:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220321_245%2F164784083154595B7w_JPEG%2Fupload_e2caeb2872f2b4228c1f73aee4a8cc14.jpg",
+    #곱창다방:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MTJfMjk3%2FMDAxNjUyMzM1NTM2NDAy.apZToWVXvjX9ZCbUoj0sPw_mNucPrPs2tiZ7n5X7RNog.gHIt-fPkboZo7qP-5zIiIrKpl4jctcTSFrhChl7ZkUYg.JPEG.dlsrlrhdwb%2F20220507%25A3%25DF192353.jpg",
+    #짚신스시&롤:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODExMTNfMjY1%2FMDAxNTQyMTE0ODExMzM3.rZDdOkpoKmWg_ztVJOnVopP4OfmJXhv84fUu1WvP_Tkg.q9BMLpM9icx_ySvZ1QtTY2FzF7wFTZ1MwFhyYr32IVEg.JPEG.syh9158%2F1542114621991.jpg",
+    #이런이궈:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDNfMjkw%2FMDAxNjA0NDE0NDA5MTk3.UN5u52MOIPkfgQyX4vXTEaqsOMXuPDk_mHBqNz8oH1Qg.cBhwW02KwOnNPCMgVVsJC7G5D37puICiE03V1eJQigsg.JPEG.lsy960423%2FIMG_7298.jpg",
+    #한가네짬뽕:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20160806_228%2Fsuyony1004_1470415420520zmYM2_JPEG%2FP20160708_144842360_3B51E754-62C5-4FBD-BD23-656B05736FA1.JPG",
+    #누구나홀딱반한닭:       
+    "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2F20151115_226%2Fhello_myboo_14475260908460p4Nd_JPEG%2FNaverBlog_20151115_033450_15.jpg",
+    #나릿집:       
+    "https://map.naver.com/v5/entry/place/748715743?c=14188687.6081518,4388051.7114360,13,0,0,0,dh&entry=plt"],
           ["순돌이뚱글이순대:https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA2MTZfMjcg%2FMDAxNTI5MTUzMDcxMjAz.QvQZHuvUcz8xyyxh_KL7mYsyxhOxjJEQj2hmt34wIfAg.DjWnwvlmc6ug_kQAhEjsiGhmwSSsETVBbIIwc-auuPwg.JPEG.since950513%2FIMG_4864.jpg",
                 "냉면",
                 "덮밥",
@@ -347,9 +376,9 @@ def Message():
         dataSend = {
           "version": "2.0",
                             "template": {"outputs": [{'basicCard': {"title": Restaurant[locationkey][foodkey],
-                                                                    "thumbnail": {"imageUrl": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg",
-                                                                                  "link": {"web": "https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20211213_33%2F1639324342170BJWJP_JPEG%2Fupload_4f7bc055c047ea83f0e7f198e136a99d.jpeg"
-                                                                                           }},
+                                                                    "thumbnail": {"imageUrl": foodimg[locationkey][foodkey],
+                                                                       },
+                                                                            
                                                                     "buttons": [
                                                 
                                                                         {
