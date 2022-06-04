@@ -48,8 +48,26 @@ public class XOOResult extends AppCompatActivity {
         btn_end5.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(XOOResult.this, MainActivity.class);
-                startActivity(intent);
+                AlertDialog.Builder builder=new AlertDialog.Builder(OOOResult.this);
+                builder.setMessage("메인으로 돌아가시겠습니까?");
+                builder.setTitle("종료 알림창")
+                        .setCancelable(false)
+                        .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int main) {
+                                Intent intent=new Intent(OOOResult.this,MainActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .setPositiveButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int end) {
+                                finish();
+                            }
+                        });
+                AlertDialog alert=builder.create();
+                alert.setTitle("종료 알림창");
+                alert.show();
             }   
         });
     }
