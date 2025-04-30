@@ -30,9 +30,6 @@
 (1)가게정보보기 - 네이버 지도 연결기능<br/>
 <img src="https://user-images.githubusercontent.com/81512557/172003661-34565100-51db-4947-b9f7-54be0e5f2aae.jpeg"  width="300" height="600"/>
 
-(2)공유기능<br/>
-<img src="https://user-images.githubusercontent.com/81512557/172003672-6fc8ea72-8ef1-455c-ac58-fce05316b03e.jpeg"  width="300" height="600"/>
-
    
 
 ### Team Notion &nbsp;
